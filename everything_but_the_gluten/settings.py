@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['everything_but_the_gluten', 'localhost']
+ALLOWED_HOSTS = ['everything-but-the-gluten', 'localhost']
 
 
 # Application definition
