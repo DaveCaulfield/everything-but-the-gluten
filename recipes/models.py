@@ -17,6 +17,8 @@ class Recipe(models.Model):
     instructions = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='like_recipe', blank=True)
+    approved = models.BooleanField(default=False)
+    
 
     class Meta:
         ordering = ['-created_on']
