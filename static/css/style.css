@@ -1,0 +1,16 @@
+
+
+.recipe-link {
+    text-decoration: none;
+    color: #445261;
+}
+
+.recipe-link:hover,
+.page-link {
+    color: #E84610;
+}
+
+.recipe-title {
+    margin-top: 20%;
+    margin-left: 5%;
+}
