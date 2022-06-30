@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
-<section class="background" ></section>
+    
+        <img class="hero-image" src={% static "/recipes/img/home_bg.jpg" %}/>
+    
+
+<section id="recipes">
   <div class="container-fluid">
     <div class="row">
 
@@ -72,6 +78,7 @@
     </nav>
     {% endif %}
 </div>
+</section>
 
 
 

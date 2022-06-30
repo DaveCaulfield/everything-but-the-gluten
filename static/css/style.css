@@ -1,9 +1,23 @@
 
 
-.background {
-    background-image: url("/static/img/home_bg.jpg");
- }
+/* body {
+    background-image: url("/static/img/home_bg.jpg");  
+ } */
 
+ .hero-image {
+    background-image: url("/static/img/home_bg.jpg"); /*The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 800px; /* You must set a specified height */
+    width: 100%;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+
+.card {
+    background-color: whitesmoke;
+}
 
 .recipe-link {
     text-decoration: none;
