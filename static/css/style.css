@@ -1,5 +1,10 @@
 
 
+.background {
+    background-image: url("/static/img/home_bg.jpg");
+ }
+
+
 .recipe-link {
     text-decoration: none;
     color: #445261;
