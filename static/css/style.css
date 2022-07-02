@@ -1,22 +1,58 @@
 
 
-/* body {
-    background-image: url("/static/img/home_bg.jpg");  
- } */
+body {
+    background-color: white;  
+ }
+ 
+ h2 {
+    font-size: 1.5rem;
+ }
 
  .hero-image {
     background-image: url("/static/img/home_bg.jpg"); /*The image used */
     background-color: #cccccc; /* Used if the image is unavailable */
-    height: 800px; /* You must set a specified height */
+    height: 1000px; /* You must set a specified height */
     width: 100%;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
+    object-fit: cover;
   }
+
+ 
+
+  .img-holder {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+  }
+
+  .container {
+    max-width: 2200px;
+  }
+
+
+
+
+  .masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
 
 
 .card {
     background-color: whitesmoke;
+    /* width: 18rem; */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
 }
 
 .recipe-link {
