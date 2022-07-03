@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     
 
-    <title>Everything but the gluten</title>
+    <title>Everything but the gluten</span></title>
 
     
 </head>
@@ -26,7 +26,7 @@
       <!-- navbar brand / title -->
       <a class="navbar-brand" href="{% url 'home'%}">
         <span class="text-secondary fw-bold">
-            Everything but the Gluten
+            Everything but the Gluten</span>
         </span>
       </a>
       <!-- toggle button for mobile nav -->
@@ -59,9 +59,18 @@
 
           {% if user.is_authenticated %}
 
+          <li class="nav-item ">
+            <a class="nav-link" href="#">welcome {{request.user.username}}</a>
+          </li>
+      
+        
+
           <li class="nav-item ms-2 d-none d-md-inline">
             <a class="btn btn-secondary" href="#add_recipe">Add Recipe</a>
           </li>
+
+      
+          
 
           {% else %}
           {% endif %}
@@ -79,7 +88,7 @@
     
   <!-- Footer -->
   <footer class="footer mt-auto py-3 dark-bg">
-    <p class="m-0 text-center text-black"><i class="far fa-heart"></i> Gluten Free </p>
+    <p class="m-0 text-center text-black"><i class="far fa-heart"></i> Free from Gluten</p>
     <p class="m-0 text-center text-black"><i class="fab fa-facebook-square ms-3"></i>
         <i class="fab fa-twitter-square ms-3"></i>
         <i class="fab fa-instagram-square ms-3"></i>
