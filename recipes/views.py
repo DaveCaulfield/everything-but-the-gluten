@@ -3,13 +3,20 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
 from .forms import CommentForm
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 
-class RecipeCreateView(generic.CreateView):
+class RecipeCreateView(SuccessMessageMixin, generic.CreateView):
     model = Recipe
     fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
     template_name = 'recipe_form.html'
+    success_url = '/'
+    success_message = "Thank You! Your recipe is awaiting approval by our team"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class RecipeList(generic.ListView):
