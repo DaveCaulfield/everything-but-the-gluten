@@ -5,6 +5,13 @@ from .models import Recipe
 from .forms import CommentForm
 
 
+
+class RecipeCreateView(generic.CreateView):
+    model = Recipe
+    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
+    template_name = 'recipe_form.html'
+
+
 class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')  
