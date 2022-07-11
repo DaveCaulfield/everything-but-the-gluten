@@ -38,6 +38,16 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
         return False
 
 
+class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    model = Recipe
+    template_name = 'recipe_confirm_delete.html'
+    
+
+    def test_func(self):
+        recipe = self.get_object()
+        if self.request.user == recipe.author:
+            return True
+        return False
 
 
 
