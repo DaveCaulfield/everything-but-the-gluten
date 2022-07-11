@@ -42,7 +42,6 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVi
     model = Recipe
     template_name = 'recipe_confirm_delete.html'
     
-
     def test_func(self):
         recipe = self.get_object()
         if self.request.user == recipe.author:

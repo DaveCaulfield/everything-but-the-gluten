@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: white;  
+    background-color: whitesmoke;  
  }
  
  h2 {
@@ -19,7 +19,6 @@ body {
     object-fit: cover;
   }
 
- 
 
   .img-holder {
     object-fit: contain;
@@ -30,9 +29,6 @@ body {
   .container {
     max-width: 2200px;
   }
-
-
-
 
   .masthead {
     margin-top: 10px;
@@ -70,12 +66,8 @@ body {
 }
 
 
-
-
-
-
 .card {
-    background-color: whitesmoke;
+    background-color: #f3f7f8ee;
     /* width: 18rem; */
 }
 
@@ -87,12 +79,12 @@ body {
 
 .recipe-link {
     text-decoration: none;
-    color: #445261;
+    color: #595959;
 }
 
 .recipe-link:hover,
 .page-link {
-    color: #E84610;
+    color: #8C5D42;
 }
 
 .recipe-title {
