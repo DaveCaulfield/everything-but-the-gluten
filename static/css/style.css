@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: whitesmoke;  
+    background-color: #E9F0F2;  
  }
  
  h2 {
@@ -13,10 +13,12 @@ body {
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 1000px; /* You must set a specified height */
     width: 100%;
+    /* background-attachment: fixed; */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
     object-fit: cover;
+    
   }
 
 
@@ -28,6 +30,21 @@ body {
 
   .container {
     max-width: 2200px;
+  }
+
+  .add_rec {
+    background-color: #E9F0F2;
+  }
+
+
+  #add_recipe {
+    background-image: url("/static/img/img_1.jpg"); /*The image used */
+    height: 1000px; /* You must set a specified height */
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
   }
 
   .masthead {

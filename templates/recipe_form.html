@@ -3,10 +3,11 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<section id="add_recipe"> 
 <div id="content-section col-md-6 mt-2 offset-md-3">
 <div class="container">
     <div class="row">
-        <div class="col-md-6 mt-2 offset-md-3">
+        <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec">
             <h3>Add Recipe</h3>
             <form class="signup" id="signup_form" method="post" action="">
                 {% csrf_token %}
@@ -20,6 +21,7 @@
     </div>
 </div>
 </div>
+</section>
 
 
 {% endblock content %}

@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4 mt-3 offset-md-4">
+    <div class="col-md-4 mt-4 offset-md-4">
       <h3>{% trans "Sign Out" %}</h3>
 
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
@@ -20,18 +20,14 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="btn btn-secondary mt-3 mb-3" type="submit">{% trans 'Sign Out' %} </button>
-        <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'home' %}">Cancel</a>
+        <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'home' %}">Go Back</a>
       </form>
 
     </div>
   </div>
 </div>
 
-<div class="img-holder">
 
-  <img class="hero-image" />
-
-</div>
 
 
 

@@ -39,7 +39,7 @@
       </button>
 
       <!-- navbar links -->
-      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+      <div class="collapse navbar-collapse justify-content-end align-center " id="main-nav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'home' %}">Home</a>
@@ -51,12 +51,14 @@
          
           <div class="dropdown show ml-5">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              welcome {{request.user.username}}
+              Hi {{request.user.username}}
             </a>
           
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="{% url 'recipe_create' %}">Add a Recipe</a>
-              <a class="dropdown-item" href="">{{request.user.username}}s Recipes</a>
+              <a class="dropdown-item" href="">My Recipes</a>
+              <a class="dropdown-item" href="">Pending Recipes</a>
+              <a class="dropdown-item" href="">Change Password</a>
               <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
             </div>
           </div>
@@ -92,6 +94,8 @@
       </div>
     </div>
   </div>
+
+  
 
 
   {% block content %}
