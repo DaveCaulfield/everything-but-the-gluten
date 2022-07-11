@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Recipe
 from .forms import CommentForm
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 
@@ -20,7 +20,7 @@ class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateVi
         return super().form_valid(form)
 
 
-class RecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
+class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
     model = Recipe
     fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
     template_name = 'recipe_form.html'
@@ -30,6 +30,13 @@ class RecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateVi
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    def test_func(self):
+        recipe = self.get_object()
+        if self.request.user == recipe.author:
+            return True
+        return False
+
 
 
 
