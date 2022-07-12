@@ -129,3 +129,19 @@ class RecipeLike(View):
 def about(request):
     
     return render(request, "about.html")
+
+
+
+
+
+class PublishedList(generic.ListView):
+
+    model = Recipe
+    queryset = Recipe.objects.filter(status=1).order_by('-created_on')  
+    template_name = 'my_published_recipes.html'
+    paginate_by = 3
+
+    def get_queryset(self):
+        return Recipe.objects.filter(author=self.request.user)
+
+    
