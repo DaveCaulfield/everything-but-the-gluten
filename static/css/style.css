@@ -13,11 +13,11 @@ body {
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 1000px; /* You must set a specified height */
     width: 100%;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    object-fit: cover;
+    /* object-fit: cover; */
     
   }
 

@@ -41,8 +41,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
 class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     model = Recipe
     template_name = 'recipe_confirm_delete.html'
-    success_url = '/'
-    success_message = "Your recipe has been updated"
+    
     
     def test_func(self):
         recipe = self.get_object()
@@ -138,15 +137,13 @@ def about(request):
 
 class PublishedList(generic.ListView):
 
-    model = Recipe
-    queryset = Recipe.objects.filter(status=1).order_by('-created_on')  
+    model = Recipe  
     template_name = 'my_published_recipes.html'
     paginate_by = 3
     
-    def get_queryset(self):
 
-        num_published_recipes = Recipe.objects.filter(author=self.request.user).count()
-        return Recipe.objects.filter(author=self.request.user)
+    def get_queryset(self):
+        return Recipe.objects.filter(author=self.request.user, status=1).order_by('-created_on')
     
        
     
