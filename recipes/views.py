@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.http import HttpResponseRedirect
-from .models import Recipe
+from django.http import HttpResponseRedirect, HttpResponse
 from .forms import CommentForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from .models import Recipe
 
 
 
@@ -56,7 +56,7 @@ class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')  
     template_name = 'index.html'
-    paginate_by = 6
+    paginate_by = 3
 
 
 class RecipeDetail(View):
@@ -124,4 +124,8 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
-        
+
+
+def about(request):
+    
+    return render(request, "about.html")
