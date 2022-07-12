@@ -5,6 +5,7 @@ urlpatterns = [
     
     path('about/', views.about, name='about'),
     path('my_published_recipes/', views.PublishedList.as_view(), name='my_published_recipes'),
+    path('my_pending_recipes/', views.PendingList.as_view(), name='my_pending_recipes'),
     path('', views.RecipeList.as_view(), name='home'),
     path('add/', views.RecipeCreateView.as_view(), name='recipe_create'),
     path('<slug:slug>/update/', views.RecipeUpdateView.as_view(), name='recipe_update'),

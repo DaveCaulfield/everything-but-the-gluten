@@ -4,15 +4,15 @@
 
 {% block content %}
 
-<section id="my_published_recipes">
-
-    <div class="col-8 offset-2 text-center pb-2">
+<section id="my_pending_recipes">
+    
+    <div class="col-8 offset-2 text-center pb-2"> 
         <h2 class="text-secondary fw-bold  mb-2">
-            {{user.username}}'s Published Recipes:
+            {{user.username}}'s Pending Recipes:
         </h2>
     </div>
 
-
+   
     <div class="background_img">
 
         <div class="container-fluid">
@@ -62,11 +62,9 @@
                                 <hr />
                                 <p> <i class="far fa-heart"></i>
                                     {{ recipe.number_of_likes }}</p>
-                                <div class="text-center">
-                                    <a class="btn btn-outline-dark mt-3 mb-3"
-                                        href="{% url 'recipe_update' recipe.slug %}">Edit</a>
-                                    <a class="btn btn-outline-danger mt-3 mb-3"
-                                        href="{% url 'recipe_delete' recipe.slug %}">Delete</a>
+                                    <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-3 mb-3" href="{% url 'recipe_update' recipe.slug %}">Edit</a>
+                                    <a class="btn btn-outline-danger mt-3 mb-3" href="{% url 'recipe_delete' recipe.slug %}">Delete</a>
                                 </div>
                             </div>
                         </div>

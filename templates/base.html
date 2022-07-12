@@ -24,7 +24,7 @@
 
 
   <!-- navbar Net Ninja-->
-  <nav class="navbar  navbar-expand-md navbar-light pt-4 pb-4">
+  <nav class="navbar  navbar-expand-md navbar-light pt-4 pb-2">
     <div class="container-xxl">
       <!-- navbar brand / title -->
       <a class="navbar-brand" href="{% url 'home'%}">
@@ -60,7 +60,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="{% url 'recipe_create' %}">Add a Recipe</a>
               <a class="dropdown-item" href="{% url 'my_published_recipes' %}">My Published Recipes</a>
-              <a class="dropdown-item" href="">Pending Recipes</a>
+              <a class="dropdown-item" href="{% url 'my_pending_recipes' %}">My Pending Recipes</a>
               <a class="dropdown-item" href="">Change Password</a>
               <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
             </div>

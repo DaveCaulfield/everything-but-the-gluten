@@ -141,9 +141,19 @@ class PublishedList(generic.ListView):
     template_name = 'my_published_recipes.html'
     paginate_by = 3
     
-
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user, status=1).order_by('-created_on')
+
+
+
+class PendingList(generic.ListView):
+
+    model = Recipe  
+    template_name = 'my_pending_recipes.html'
+    paginate_by = 3
+    
+    def get_queryset(self):
+        return Recipe.objects.filter(author=self.request.user, status=0).order_by('-created_on')
     
        
     
