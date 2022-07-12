@@ -140,8 +140,11 @@ class PublishedList(generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')  
     template_name = 'my_published_recipes.html'
     paginate_by = 3
-
+    
     def get_queryset(self):
-        return Recipe.objects.filter(author=self.request.user)
 
+        num_published_recipes = Recipe.objects.filter(author=self.request.user).count()
+        return Recipe.objects.filter(author=self.request.user)
+    
+       
     

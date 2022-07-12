@@ -4,76 +4,79 @@
 
 {% block content %}
 
+<section id="my_published_recipes">
+    
 
-
-<h1> My Published Recipes</h1>
-
-<section id="recipes">
-
-    <div class="mb-2 mt-5 ">
-        <h2 class="text-secondary fw-bold ">
-            Gluten Free Recipes
+        <h2 class="text-secondary fw-bold col-8 offset-2 mb-2">
+            Published Recipes:
         </h2>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
 
-            <!-- Recipe Entries Column -->
-            <div class="col-12 mt-3 left">
-                <div class="row">
-                    {% for recipe in recipe_list %}
-                    <div class="col-md-4">
+   
+    <div class="background_img">
 
-                        <div class="card-deck">
-                            <div class="card mb-4" style="width: 18rem">
-                                <div class="card-body">
+        <div class="container-fluid">
+            <div class="row">
 
-                                    <a href="{% url 'recipe_detail' recipe.slug%}" class="recipe-link">
+                <!-- Recipe Entries Column -->
+                <div class="col-8 offset-2 mt-3 ">
+                    <div class="row">
+                        {% for recipe in recipe_list %}
+                        <div class="col-md-4">
+
+                            <div class="card-deck">
+                                <div class="card mb-4" style="width: 18rem">
+                                    <div class="card-body">
+
+                                        <a href="{% url 'recipe_detail' recipe.slug%}" class="recipe-link">
 
 
-                                        <div class="image-container">
-                                            {% if "placeholder" in recipe.featured_image.url %}
-                                            <img class="card-img-top"
-                                                src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                                            {% else %}
-                                            <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
-                                            {% endif %}
-                                            <div class="image-flash">
+                                            <div class="image-container">
+                                                {% if "placeholder" in recipe.featured_image.url %}
+                                                <img class="card-img-top"
+                                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                                {% else %}
+                                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+                                                {% endif %}
+                                                <div class="image-flash">
 
-                                                <!-- <a href="#" class="recipe-link"> -->
-                                                <h2 class="card-title">{{ recipe.title }}</h2>
-                                    </a>
+                                                    <!-- <a href="#" class="recipe-link"> -->
+                                                    <h2 class="card-title">{{ recipe.title }}</h2>
+                                        </a>
 
-                                    <p class="author">by {{ recipe.author }}</p>
+                                        <p class="author">by {{ recipe.author }}</p>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <div class="card-text">
+                                    <p>
+                                        <i class="far fa-clock card-icons"></i> Prep time:
+                                        {{ recipe.preparation_time  }}
+                                    </p>
+                                    <p>
+                                        <i class="far fa-clock card-icons"></i> Cook time: {{ recipe.cooking_time }}
+                                    </p>
+                                </div>
+
+                                <hr />
+                                <p> <i class="far fa-heart"></i>
+                                    {{ recipe.number_of_likes }}</p>
+                                    <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-3 mb-3" href="{% url 'recipe_update' recipe.slug %}">Edit</a>
+                                    <a class="btn btn-outline-danger mt-3 mb-3" href="{% url 'recipe_delete' recipe.slug %}">Delete</a>
                                 </div>
                             </div>
-
-                            <hr />
-                            <div class="card-text">
-                                <p>
-                                    <i class="far fa-clock card-icons"></i> Prep time: {{ recipe.preparation_time  }}
-                                </p>
-                                <p>
-                                    <i class="far fa-clock card-icons"></i> Cook time: {{ recipe.cooking_time }}
-                                </p>
-                            </div>
-
-                            <hr />
-                            <p> <i class="far fa-heart"></i>
-                                {{ recipe.number_of_likes }}</p>
-
                         </div>
                     </div>
                 </div>
+                {% if forloop.counter|divisibleby:3 %}
             </div>
-            {% if forloop.counter|divisibleby:3 %}
-        </div>
-        <div class="row">
-            {% endif %}
-            {% endfor %}
+            <div class="row">
+                {% endif %}
+                {% endfor %}
 
+            </div>
         </div>
-    </div>
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">
@@ -90,7 +93,7 @@
     {% endif %}
     </div>
 
-
+    </div>
 </section>
 
 
