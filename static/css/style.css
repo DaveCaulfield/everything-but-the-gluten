@@ -47,15 +47,7 @@ body {
     background-size: cover; /* Resize the background image to cover the entire container */
   }
 
-  .about {
-    background-image: url("/static/img/img_1.jpg"); /*The image used */
-    height: 1000px; /* You must set a specified height */
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-  }
+
 
   .masthead {
     margin-top: 10px;
