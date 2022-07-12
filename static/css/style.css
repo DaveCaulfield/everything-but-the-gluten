@@ -11,7 +11,7 @@ body {
  .hero-image {
     background-image: url("/static/img/home_bg.jpg"); /*The image used */
     background-color: #cccccc; /* Used if the image is unavailable */
-    height: 1000px; /* You must set a specified height */
+    height: 800px; /* You must set a specified height */
     width: 100%;
     background-attachment: fixed;
     background-position: center; /* Center the image */
@@ -39,12 +39,16 @@ body {
 
   .background_img {
     background-image: url("/static/img/img_1.jpg"); /*The image used */
-    height: 1000px; /* You must set a specified height */
+    height: 800px; /* You must set a specified height */
     width: 100%;
     background-attachment: fixed;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
+  }
+  
+  #about_us {
+    margin-top: 50px;
   }
 
 

@@ -154,6 +154,11 @@ class PendingList(generic.ListView):
     
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user, status=0).order_by('-created_on')
+
+
+
+
+    
     
        
     
