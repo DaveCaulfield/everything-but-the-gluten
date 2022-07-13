@@ -4,11 +4,11 @@
 
 {% block content %}
 
-<section id="my_pending_recipes">
+<section id="my_favourite_recipes">
     
     <div class="col-8 offset-2 text-center pb-2"> 
         <h2 class="text-secondary fw-bold  mb-2">
-            Pending Recipes by {{user.username}}
+            Favourite Recipes by {{user.username}}
         </h2>
     </div>
 
@@ -62,7 +62,7 @@
                                 <hr />
                                 <p> <i class="far fa-heart"></i>
                                     {{ recipe.number_of_likes }}</p>
-                                   
+                                    
                             </div>
                         </div>
                     </div>

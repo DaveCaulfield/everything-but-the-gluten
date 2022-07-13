@@ -159,6 +159,19 @@ class PendingList(generic.ListView):
 
 
 
+class FavouriteList(generic.ListView):
+
+    model = Recipe  
+    template_name = 'my_favourite_recipes.html'
+    paginate_by = 3
+
+    def get_queryset(self):
+        return Recipe.objects.filter(likes=True).order_by('-created_on')
+        
+        
+
+
+
 
     
     
