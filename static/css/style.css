@@ -39,7 +39,7 @@ body {
 
   .background_img {
     background-image: url("/static/img/img_1.jpg"); /*The image used */
-    height: 800px; /* You must set a specified height */
+    height: 1200px; /* You must set a specified height */
     width: 100%;
     background-attachment: fixed;
     background-position: center; /* Center the image */
