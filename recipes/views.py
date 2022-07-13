@@ -41,7 +41,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
 class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     model = Recipe
     template_name = 'recipe_confirm_delete.html'
-    success_url = '/#recipes' 
+    success_url = '/'
     success_message = "Your recipe has been deleted"
     
     

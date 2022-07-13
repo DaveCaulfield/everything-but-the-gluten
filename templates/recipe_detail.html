@@ -37,6 +37,14 @@
                 <h2 class="card-title">{{ recipe.title }}</h2>
                 <p>By {{ recipe.author }}</p>
                 <p class="card-text text-muted h6">Posted on {{ recipe.created_on}}</p>
+                <div >
+                    {% if recipe.author == user%}
+                   
+                        <a class="btn btn-secondary mt-3 mb-3" href="{% url 'recipe_update' recipe.slug %}">Edit</a>
+                        <a class="btn btn-danger mt-3 mb-3" href="{% url 'recipe_delete' recipe.slug %}">Delete</a>
+                   
+                    {% endif %}
+                </div>
 
                 <img src=" {{ recipe.featured_image.url }}" width="50%" height="50%">
 
@@ -77,6 +85,9 @@
                         </strong>
 
                     </div>
+
+
+                  
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
@@ -84,6 +95,9 @@
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
+
+                
+
                 </div>
             </div>
         </div>
