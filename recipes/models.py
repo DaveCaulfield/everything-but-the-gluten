@@ -1,4 +1,6 @@
 from django.db import models
+from django.template.defaultfilters import slugify  
+from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
@@ -29,6 +31,11 @@ class Recipe(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
