@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from .forms import CommentForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Recipe
+
 
 
 
@@ -26,6 +27,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
     template_name = 'recipe_form.html'
     success_url = '/'
     success_message = "Your recipe has been updated"
+
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -111,7 +113,7 @@ class RecipeDetail(View):
                 "comments": comments,
                 "commented": True,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
             },
         )       
 
@@ -155,7 +157,7 @@ class PendingList(generic.ListView):
     paginate_by = 3
     
     def get_queryset(self):
-        return Recipe.objects.filter(author=self.request.user, status=0).order_by('-created_on')
+        return Recipe.objects.filter(author=self.request.user, approved=False).order_by('-created_on')
 
 
 

@@ -12,8 +12,8 @@
 
             <form method="POST">
                 {% csrf_token %}
-                <input type="submit" value="Yes, Delete" class="btn btn-outline-danger mt-3 mb-3">
-                <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'recipe_detail' recipe.slug %}">Cancel</button>
+                <button class="btn btn-outline-danger mt-3 mb-3" type="submit" >Yes, Delete</button>
+                <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'recipe_detail' recipe.slug %}">Cancel</a>
             </form>
             
         </div>

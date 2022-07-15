@@ -14,7 +14,7 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                <input type="hidden" name="{{ redirect_field_name  | safe }}" value="{{ redirect_field_value  | safe }}" />
                 {% endif %}
                 <button class="btn btn-secondary mt-3 mb-3" type="submit">Submit</button>
             </form>
