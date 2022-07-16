@@ -1,10 +1,16 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from .forms import CommentForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Recipe
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
+
 
 
 
@@ -27,8 +33,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
     template_name = 'recipe_form.html'
     success_url = '/'
     success_message = "Your recipe has been updated"
-
-
+    
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -170,7 +175,23 @@ class FavouriteList(generic.ListView):
     def get_queryset(self):
         return Recipe.objects.filter(likes=True).order_by('-created_on')
         
-        
+
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'change_password.html', {
+        'form': form
+    })    
 
 
 
