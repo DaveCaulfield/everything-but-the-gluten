@@ -1,14 +1,18 @@
+"""Imports"""
 from django.db import models
-from django.template.defaultfilters import slugify  
+from django.template.defaultfilters import slugify
 from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from django.urls import reverse
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Recipe(models.Model):
+    """
+    Model for recipe
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipes")
@@ -25,15 +29,21 @@ class Recipe(models.Model):
     
 
     class Meta:
+        """
+        Orders recipes by date created - newest first
+        """
         ordering = ['-created_on']
 
     def __str__(self):
+        """Magic Method, returns a string description of the object"""
         return self.title
 
     def number_of_likes(self):
+        """Helper method, returns the amount of likes on a recipe"""
         return self.likes.count()
 
     def save(self, *args, **kwargs):
+        """ slugify function from learndjango.com"""
         if not self.slug:
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
@@ -42,7 +52,11 @@ class Recipe(models.Model):
 
 
 class Comment(models.Model):
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
+    """
+    Comments model. Authenticated memebers can comment on a recipe
+    """
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -50,8 +64,12 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
+        """
+        Orders recipes by date created - newest first
+        """
         ordering = ['created_on']
 
     def __str__(self):
+        """Magic Method, returns a string description of the object"""
         return f"Comment {self.body} by {self.name}"
 

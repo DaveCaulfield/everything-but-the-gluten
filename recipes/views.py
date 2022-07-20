@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse,redirect
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
@@ -12,57 +12,10 @@ from django.contrib.auth.forms import PasswordChangeForm
 
 
 
-
-
-
-class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
-    model = Recipe
-    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
-    template_name = 'recipe_form.html'
-    success_url = '/'
-    success_message = "Thank You! Your recipe is awaiting approval by our team"
-
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
-
-class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
-    model = Recipe
-    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
-    template_name = 'recipe_form.html'
-    success_url = '/'
-    success_message = "Your recipe has been updated"
-    
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
-    def test_func(self):
-        recipe = self.get_object()
-        if self.request.user == recipe.author:
-            return True
-        return False
-
-
-class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
-    model = Recipe
-    template_name = 'recipe_confirm_delete.html'
-    success_url = '/'
-    success_message = "Your recipe has been deleted"
-    
-    
-    def test_func(self):
-        recipe = self.get_object()
-        if self.request.user == recipe.author:
-            return True
-        return False
-
-
-
-
-
 class RecipeList(generic.ListView):
+    """
+    View for the list of all published recipes
+    """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')  
     template_name = 'index.html'
@@ -70,6 +23,9 @@ class RecipeList(generic.ListView):
 
 
 class RecipeDetail(View):
+    """
+    View recipe details
+    """
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
@@ -77,7 +33,7 @@ class RecipeDetail(View):
         comments = recipe.comments.filter(approved=True).order_by('created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
-            liked =True
+            liked = True
 
         return render(
             request,
@@ -97,7 +53,7 @@ class RecipeDetail(View):
         comments = recipe.comments.filter(approved=True).order_by('created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
-            liked =True
+            liked = True
         
         comment_form = CommentForm(data=request.POST)
 
@@ -136,12 +92,55 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
+
+class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
+    model = Recipe
+    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
+    template_name = 'recipe_form.html'
+    success_url = '/'
+    success_message = "Thank You! Your recipe is awaiting approval by our team"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
+class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
+    model = Recipe
+    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
+    template_name = 'recipe_form.html'
+    success_url = '/'
+    success_message = "Your recipe has been updated"
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        recipe = self.get_object()
+        if self.request.user == recipe.author:
+            return True
+        return False
+
+
+class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    model = Recipe
+    template_name = 'recipe_confirm_delete.html'
+    success_url = '/'
+    success_message = "Your recipe has been deleted"
+     
+    def test_func(self):
+        recipe = self.get_object()
+        if self.request.user == recipe.author:
+            return True
+        return False
+
+
+
+
 def about(request):
     
     return render(request, "about.html")
-
-
-
 
 
 class PublishedList(generic.ListView):
@@ -149,6 +148,7 @@ class PublishedList(generic.ListView):
     model = Recipe  
     template_name = 'my_published_recipes.html'
     paginate_by = 3
+    
     
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user, status=1).order_by('-created_on')
@@ -191,12 +191,5 @@ def change_password(request):
         form = PasswordChangeForm(request.user)
     return render(request, 'change_password.html', {
         'form': form
-    })    
+    })
 
-
-
-
-    
-    
-       
-    
