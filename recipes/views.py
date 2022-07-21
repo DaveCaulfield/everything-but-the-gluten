@@ -136,13 +136,6 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVi
         return False
 
 
-
-
-def about(request):
-    
-    return render(request, "about.html")
-
-
 class PublishedList(generic.ListView):
 
     model = Recipe  
