@@ -3,6 +3,14 @@
 body {
     background-color: #E9F0F2;  
  }
+
+ .navbar{
+  background-color: #E9F0F2; 
+ }
+
+ .logout{
+  margin-top: 100px50px;
+ }
  
  h2 {
     font-size: 1.5rem;
