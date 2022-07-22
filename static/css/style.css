@@ -16,8 +16,8 @@ body {
     font-size: 1.5rem;
  }
 
- .hero-image {
-    background-image: url("/static/img/home_bg.jpg"); /*The image used */
+ #hero-image {
+    background-image: url("/static/img/home_bg.jpg"); /*The image used 
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 800px; /* You must set a specified height */
     width: 100%;
@@ -25,8 +25,7 @@ body {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    /* object-fit: cover; */
-    
+    /* object-fit: cover; */ 
   }
 
 
