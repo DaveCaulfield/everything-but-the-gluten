@@ -167,7 +167,7 @@ class FavouriteList(generic.ListView):
 
     def get_queryset(self):
         user = self.request.user
-        queryset = Recipe.objects.filter(likes = user.id)
+        queryset = Recipe.objects.filter(likes=user.id)
         return queryset
 
 
