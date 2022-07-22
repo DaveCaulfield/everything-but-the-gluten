@@ -13,7 +13,7 @@
             <form class="signup" id="signup_form" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
 
-                    {{ form|crispy|safe }}
+                    {{ form | crispy | safe }}
                 <button class="btn btn-secondary mt-3 mb-3" type="submit">Submit</button>
                
             </form>

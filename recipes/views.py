@@ -167,7 +167,6 @@ class FavouriteList(generic.ListView):
 
     def get_queryset(self):
         return Recipe.objects.filter(likes=True).order_by('-created_on')
-        
 
 
 def change_password(request):
