@@ -166,7 +166,10 @@ class FavouriteList(generic.ListView):
     paginate_by = 3
 
     def get_queryset(self):
-        return Recipe.objects.filter(likes=True).order_by('-created_on')
+        user = self.request.user
+        queryset = Recipe.objects.filter(likes = user.id)
+        return queryset
+
 
 
 def change_password(request):

@@ -48,6 +48,7 @@ class Recipe(models.Model):
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
 
+
     
 
 
