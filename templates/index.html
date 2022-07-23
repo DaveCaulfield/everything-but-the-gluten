@@ -6,9 +6,7 @@
 
 <div class="container ">
     <div class="img-holder">
-
-        <img src="https://asset.cloudinary.com/dwobtnj0v/26bc7f23127e366c8cdb7e9226b73c1b" id="hero-image" />
-        
+    <div class="hero-image">       
     </div>
 </div>
 
@@ -41,7 +39,7 @@
 
                                         <div class="image-container">
                                             {% if "placeholder" in recipe.featured_image.url %}
-                                            <img class="card-img-top" src="/static/img/img_3.jpg">
+                                            <img class="card-img-top" src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1658523309/static/img/home_bg.79b8670b4390.jpg">
                                             {% else %}
                                             <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
                                             {% endif %}

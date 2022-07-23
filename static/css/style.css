@@ -16,16 +16,16 @@ body {
     font-size: 1.5rem;
  }
 
- #hero-image {
+
+
+  .hero-image {
     background-image: url("https://asset.cloudinary.com/dwobtnj0v/26bc7f23127e366c8cdb7e9226b73c1b"); /*The image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 800px; /* You must set a specified height */
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    /* object-fit: cover; */ 
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
 
 
