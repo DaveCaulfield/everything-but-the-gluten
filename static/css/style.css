@@ -21,7 +21,8 @@ body {
   .hero-image {
     background-image: url("https://asset.cloudinary.com/dwobtnj0v/26bc7f23127e366c8cdb7e9226b73c1b"); /*The image used */
     background-color: #cccccc;
-    height: 500px;
+    height: 800px;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
