@@ -3,6 +3,7 @@ from django.urls import path
 
 urlpatterns = [
     
+  
     path('change_password/', views.change_password, name='change_password'),
     path('my_published_recipes/', views.PublishedList.as_view(), name='my_published_recipes'),
     path('my_pending_recipes/', views.PendingList.as_view(), name='my_pending_recipes'),

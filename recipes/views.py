@@ -110,12 +110,20 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
     fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
     template_name = 'recipe_form.html'
     success_url = '/'
-    success_message = "Your recipe has been updated"
-    
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
+    success_message = "Your recipe update will be reviewd"
 
+    def form_valid(self, form):
+        if self.object.status == 1:
+            form.instance.status = 0
+    
+        # recipe = get_object_or_404(Recipe, slug=self.kwargs['slug'])
+    
+        # if recipe.status == 1:
+        #     recipe.status = 0
+        #     recipe.save()
+        
+        return super().form_valid(form)
+       
     def test_func(self):
         recipe = self.get_object()
         if self.request.user == recipe.author:
@@ -123,11 +131,13 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
         return False
 
 
+
 class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     model = Recipe
     template_name = 'recipe_confirm_delete.html'
     success_url = '/'
     success_message = "Your recipe has been deleted"
+
      
     def test_func(self):
         recipe = self.get_object()
@@ -188,3 +198,6 @@ def change_password(request):
         'form': form
     })
 
+
+
+    
