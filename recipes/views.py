@@ -115,13 +115,6 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
     def form_valid(self, form):
         if self.object.status == 1:
             form.instance.status = 0
-    
-        # recipe = get_object_or_404(Recipe, slug=self.kwargs['slug'])
-    
-        # if recipe.status == 1:
-        #     recipe.status = 0
-        #     recipe.save()
-        
         return super().form_valid(form)
        
     def test_func(self):
@@ -165,7 +158,7 @@ class PendingList(generic.ListView):
     paginate_by = 3
     
     def get_queryset(self):
-        return Recipe.objects.filter(author=self.request.user, approved=False).order_by('-created_on')
+        return Recipe.objects.filter(author=self.request.user, status=0).order_by('-created_on')
 
 
 
