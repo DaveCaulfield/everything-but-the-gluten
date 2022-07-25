@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic import FormView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .forms import CommentForm
+from .forms import CommentForm, AdminAreaForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Recipe
@@ -192,4 +193,13 @@ def change_password(request):
 
 
 
-    
+class AdminAreaFormView(FormView):
+    form_class = AdminAreaForm
+    template_name = 'admin_area.html'
+    success_url = '/'
+   
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+
+        return super().form_valid(form)
