@@ -97,7 +97,7 @@ class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateVi
     model = Recipe
     fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
     template_name = 'recipe_form.html'
-    success_url = '/'
+    success_url = reverse_lazy('my_pending_recipes')
     success_message = "Thank You! Your recipe is awaiting approval by our team"
 
     def form_valid(self, form):
@@ -109,7 +109,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
     model = Recipe
     fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
     template_name = 'recipe_form.html'
-    success_url = '/'
+    success_url = reverse_lazy('my_pending_recipes')
     success_message = "Your recipe update will be reviewd"
 
     def form_valid(self, form):
@@ -128,7 +128,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
 class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     model = Recipe
     template_name = 'recipe_confirm_delete.html'
-    success_url = '/'
+    success_url = reverse_lazy('my_published_recipes')
     success_message = "Your recipe has been deleted"
 
      
@@ -144,8 +144,7 @@ class PublishedList(generic.ListView):
     model = Recipe  
     template_name = 'my_published_recipes.html'
     paginate_by = 3
-    
-    
+
     def get_queryset(self):
         return Recipe.objects.filter(author=self.request.user, status=1).order_by('-created_on')
 
