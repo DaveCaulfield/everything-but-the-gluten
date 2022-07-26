@@ -67,14 +67,14 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              {% if user.is_superuser %}
+              <a class="dropdown-item" href="{% url 'admin_area' %}">Recipes to be Approved</a>
+              {% endif %}
               <a class="dropdown-item" href="{% url 'recipe_create' %}">Add a Recipe</a>
               <a class="dropdown-item" href="{% url 'my_published_recipes' %}">My Published Recipes</a>
               <a class="dropdown-item" href="{% url 'my_pending_recipes' %}">My Pending Recipes</a>
               <a class="dropdown-item" href="{% url 'my_favourite_recipes' %}">My Favourite Recipes</a>
               <a class="dropdown-item" href="{% url 'change_password' %}">Change Password</a>
-              {% if user.is_superuser %}
-              <a class="dropdown-item" href="{% url 'recipe_create' %}">Admin Template</a>
-              {% endif %}
               <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
             </div>
           </div>

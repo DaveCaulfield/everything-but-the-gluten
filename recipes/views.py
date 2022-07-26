@@ -3,10 +3,10 @@ from django.views import generic, View
 from django.views.generic import FormView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .forms import CommentForm, AdminAreaForm
+from .forms import CommentForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .models import Recipe
+from .models import Recipe, Comment
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
@@ -29,7 +29,7 @@ class RecipeDetail(View):
     """
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = Recipe.objects.filter(status=1)
+        queryset = Recipe.objects
         recipe = get_object_or_404(queryset, slug=slug)
         comments = recipe.comments.filter(approved=True).order_by('created_on')
         liked = False
@@ -117,7 +117,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
         if self.object.status == 1:
             form.instance.status = 0
         return super().form_valid(form)
-       
+
     def test_func(self):
         recipe = self.get_object()
         if self.request.user == recipe.author:
@@ -193,13 +193,26 @@ def change_password(request):
 
 
 
-class AdminAreaFormView(FormView):
-    form_class = AdminAreaForm
+class AdminPendingList(generic.ListView):
+
+    model = Recipe  
     template_name = 'admin_area.html'
-    success_url = '/'
-   
+    paginate_by = 3
+    
+    def get_queryset(self):
+        return Recipe.objects.filter(status=0).order_by('-created_on')
+
+
+
+class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
+    model = Recipe
+    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions', 'status', 'approved']
+    template_name = 'admin_recipe_form.html'
+    success_url = reverse_lazy('admin_area')
+    success_message = "Recipe updated"
 
     def form_valid(self, form):
-        print(form.cleaned_data)
-
         return super().form_valid(form)
+
+    
+

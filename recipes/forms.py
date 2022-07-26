@@ -7,7 +7,6 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
-class AdminAreaForm(forms.Form):
-    title = forms.CharField()
+
 
 
