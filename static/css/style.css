@@ -141,3 +141,13 @@ body {
 .social-networks i:hover {
   color: silver;
 }
+
+
+.img_detail{
+ width: 80%;
+ object-fit: cover;
+}
+
+.image-container{
+  object-fit: cover;
+}

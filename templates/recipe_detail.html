@@ -26,10 +26,17 @@
                    
                     {% endif %}
                 </div>
+
+
                 
+        <div class="img_detail">
+                {% if "placeholder" in recipe.featured_image.url %}
+                <img class="card-img-top "  src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1658523307/static/img/img_1.a75a327018a7.jpg" >
+                {% else %}
+                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+                {% endif %}
 
-                <img src=" {{ recipe.featured_image.url }}" width="50%" height="50%">
-
+            </div>
 
                 <p class="card-text ">
                     {{ recipe.content | safe }}
@@ -82,16 +89,12 @@
 
                 
 
-                </div>
+                
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
+     </div>
+  
+     <!-- <div class="row"> -->
         <div class="col-md-8 offset-md-2 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
