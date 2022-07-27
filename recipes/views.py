@@ -213,6 +213,3 @@ class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.Upd
 
     def form_valid(self, form):
         return super().form_valid(form)
-
-    
-
