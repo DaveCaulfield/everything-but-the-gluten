@@ -17,7 +17,7 @@
                 <!-- Use the | safe filter inside the template tags -->
                 <h2 class="card-title">{{ recipe.title }}</h2>
                 <p>By {{ recipe.author }}</p>
-                <p class="card-text text-muted h6">Posted on {{ recipe.created_on}}</p>
+                <p class="card-text text-muted h6">Posted on {{ recipe.created_on | date:"j F Y" }}</p>
                 <div >
                     {% if recipe.author == user%}
                    
@@ -41,11 +41,11 @@
                 <p class="card-text ">
                     {{ recipe.content | safe }}
                 </p>
-                <h3>Ingredients:</h3>
+                <h3 class="text-muted">Ingredients:</h3>
                 <p class="card-text ">
                     {{ recipe.ingredients| safe }}
                 </p>
-                <h3>Instructions:</h3>
+                <h3 class="text-muted">Instructions:</h3>
                 <p class="card-text ">
                     {{ recipe.instructions | safe }}
                 </p>
@@ -96,7 +96,6 @@
   
      <!-- <div class="row"> -->
         <div class="col-md-8 offset-md-2 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
@@ -112,7 +111,8 @@
                             </p>
                             <span class=" text-muted font-weight-normal">
                                 <!-- The comment's created date goes here -->
-                                {{ comment.created_on }}
+                                {{ comment.created_on | date:"l j F Y @ H:i" }}
+                                
                             </span>
 
                         </li>
@@ -128,9 +128,10 @@
             <div class="card-body ">
 
                 {% if user.is_authenticated %}
+                <h3 class="text-center text-muted pb-3">Comments</h3>
 
-                <h3 class="mt-5">Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <h2 class="mt-5 text-muted">Let us know if you tried this recipe . . . or just say hello in the comments below.</h2>
+               
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
@@ -138,7 +139,7 @@
                 </form>
                 {% endif %}
 
-                <!-- For later -->
+               
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
