@@ -6,7 +6,7 @@
 
 <section id="my_published_recipes">
 
-    <div class="col-8 offset-2 text-center pb-2">
+    <div class="col-8 offset-2 text-center pb-2 mt-5">
         <h2 class="text-secondary fw-bold  mb-2">
             Published Recipes by {{user.username}}
         </h2>
@@ -15,66 +15,64 @@
 
     <!-- <div class="background_img"> -->
 
-        <div class="container-fluid ">
-            <div class="row">
+    <div class="container-fluid ">
+        <div class="row">
 
-                <!-- Recipe Entries Column -->
-                <div class="col-8 offset-2 mt-5 ">
-                    <div class="row">
-                        {% for recipe in recipe_list %}
-                        <div class="col-md-4">
+            <!-- Recipe Entries Column -->
+            <div class="col-8 offset-2 mt-5 ">
+                <div class="row">
+                    {% for recipe in recipe_list %}
+                    <div class="col-md-4">
 
-                            <div class="card-deck">
-                                <div class="card mb-4 shadow p-3 mb-5 rounded" style="width: 18rem">
-                                    <div class="card-body">
+                        <div class="card-deck">
+                            <div class="card mb-4 shadow p-3 mb-5 rounded" style="width: 18rem">
+                                <div class="card-body">
+                                    <a href="{% url 'recipe_detail' recipe.slug%}" class="recipe-link">
 
-                                        <a href="{% url 'recipe_detail' recipe.slug%}" class="recipe-link">
+                                        <div class="image-container">
+                                            {% if "placeholder" in recipe.featured_image.url %}
+                                            <img class="card-img-top"
+                                                src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1658523307/static/img/img_1.a75a327018a7.jpg">
+                                            {% else %}
+                                            <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+                                            {% endif %}
+                                            <div class="image-flash">
 
+                                                <h2 class="card-title">{{ recipe.title }}</h2>
+                                    </a>
 
-                                            <div class="image-container">
-                                                {% if "placeholder" in recipe.featured_image.url %}
-                                                <img class="card-img-top"
-                                                    src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1658523307/static/img/img_1.a75a327018a7.jpg">
-                                                {% else %}
-                                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
-                                                {% endif %}
-                                                <div class="image-flash">
+                                    <p class="author">by {{ recipe.author }}</p>
 
-                                                    <!-- <a href="#" class="recipe-link"> -->
-                                                    <h2 class="card-title">{{ recipe.title }}</h2>
-                                        </a>
-
-                                        <p class="author">by {{ recipe.author }}</p>
-                                    </div>
                                 </div>
-
-                                <hr />
-                                <div class="card-text">
-                                    <p>
-                                        <i class="far fa-clock card-icons"></i> Prep time:
-                                        {{ recipe.preparation_time  }}
-                                    </p>
-                                    <p>
-                                        <i class="far fa-clock card-icons"></i> Cook time: {{ recipe.cooking_time }}
-                                    </p>
-                                </div>
-
-                                <hr />
-                                <p> <i class="far fa-heart"></i>
-                                    {{ recipe.number_of_likes }}</p>
-                                
                             </div>
+
+                            <hr />
+                            <div class="card-text">
+                                <p>
+                                    <i class="far fa-clock card-icons"></i> Prep time:
+                                    {{ recipe.preparation_time  }}
+                                </p>
+                                <p>
+                                    <i class="far fa-clock card-icons"></i> Cook time: {{ recipe.cooking_time }}
+                                </p>
+                            </div>
+
+                            <hr />
+                            <p> <i class="far fa-heart"></i>
+                                {{ recipe.number_of_likes }}</p>
+
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
             </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
-            </div>
+            {% if forloop.counter|divisibleby:3 %}
         </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">

@@ -16,18 +16,12 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-
   <title>Everything but the gluten</span></title>
-
-
 </head>
 
 <body class="d-flex flex-column min-vh-100 main-bg">
 
-
-
-
-  <!-- navbar Net Ninja-->
+  <!-- navbar section-->
   <nav class="navbar  navbar-expand-md navbar-light pt-2 pb-2 ">
     <div class="container-xxl">
       <!-- navbar brand / title -->
@@ -57,8 +51,8 @@
 
           {% if user.is_authenticated %}
           <li class="nav-item dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Hi {{user.username}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -66,7 +60,7 @@
               <a class="dropdown-item" href="{% url 'admin_area' %}">Recipes Waiting</a>
               <div class="dropdown-divider"></div>
               {% endif %}
-              
+
               <a class="dropdown-item" href="{% url 'recipe_create' %}">Add a Recipe</a>
               <a class="dropdown-item" href="{% url 'my_published_recipes' %}">My Published Recipes</a>
               <a class="dropdown-item" href="{% url 'my_pending_recipes' %}">My Pending Recipes</a>
@@ -84,16 +78,14 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
           </li>
-
           {% endif %}
-
 
         </ul>
       </div>
     </div>
   </nav>
 
-
+  <!-- Message alerts -->
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -108,13 +100,10 @@
     </div>
   </div>
 
-
-
-
   {% block content %}
 
-  {% endblock content %}
 
+  {% endblock content %}
 
   <!-- Footer -->
   <footer class="footer mt-auto dark-bg">
@@ -141,7 +130,7 @@
   </footer>
 
 
-
+  <!-- messafe alert timeout function -->
   <script>
     setTimeout(function () {
       let messages = document.getElementById("msg");

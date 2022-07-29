@@ -4,48 +4,43 @@
 
 {% block content %}
 
-<!-- <div class="container">
-    <div class="hero-image"></div>
-</div> -->
-
-
-
+ <!-- landing page / about section -->
 <section id="about">
     <div id="content-section col-md-6 mt-2 offset-md-3">
         <div class="container hero-image">
             <div class="row">
 
-<div id="about_us">
-    <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec text-center shadow p-3 mb-5 rounded">
-        <h3 class="text-muted mt-3 mb-5 pt-3"> Welcome to Everything but the Gluten.</h3>
-        <p> We are a recipe sharing community helping people find and share tasty gluten free recipes.
-        </p>
-        <p> Our aim is to help people living with coeliac disease on their life long gluten free
-            journey.</p>
-        <p> Please sign up to create your own personal account.</p>
-        <p> Share your recipes with others. </p>
-        <p> Comment on recipes.
-            <p> Save your favourites by liking them. <i class="far fa-heart"></i> </p>
-            <p class="pb-3"> Our community is open to anyone looking for gluten free ideas.</p>
+                <div id="about_us">
+                    <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec text-center shadow p-3 mb-5 rounded">
+                        <h3 class="text-muted mt-3 mb-5 pt-3"> Welcome to Everything but the Gluten.</h3>
+                        <p> We are a recipe sharing community helping people find and share tasty gluten free recipes.
+                        </p>
+                        <p> Our aim is to help people living with coeliac disease on their life long gluten free
+                            journey.</p>
+                        <p> Please sign up to create your own personal account.</p>
+                        <p> Share your recipes with others. </p>
+                        <p> Comment on recipes.
+                            <p> Save your favourites by liking them. <i class="far fa-heart"></i> </p>
+                            <p class="pb-3"> Our community is open to anyone looking for gluten free ideas.</p>
 
-            <a class="arrow-up" href="#recipes">
-                <i class="fa fa-chevron-circle-down"></i>
-            </a>
+                            <a class="arrow-up" href="#recipes">
+                                <i class="fa fa-chevron-circle-down"></i>
+                            </a>
 
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
-</div>
 </section>
 
 
-
+ <!-- recipes section -->
 <section id="recipes">
     <div class=" col-8 mb-2 mt-5 offset-2 text-center">
-   <h2 class="text-secondary fw-bold ">
-          helping people find and share tasty gluten free recipes
-        </h2>   
+        <h2 class="text-secondary fw-bold ">
+            helping people find and share tasty gluten free recipes
+        </h2>
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -65,12 +60,13 @@
 
                                         <div class="image-container">
                                             {% if "placeholder" in recipe.featured_image.url %}
-                                            <img class="card-img-top" src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1658523307/static/img/img_1.a75a327018a7.jpg">
+                                            <img class="card-img-top"
+                                                src="https://res.cloudinary.com/dwobtnj0v/image/upload/v1658523307/static/img/img_1.a75a327018a7.jpg">
                                             {% else %}
                                             <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
                                             {% endif %}
                                             <div class="image-flash">
-  
+
                                                 <h2 class="card-title">{{ recipe.title }}</h2>
                                     </a>
 
@@ -119,14 +115,13 @@
     </nav>
     {% endif %}
     </div>
-</div>
-</div>
+    </div>
+    </div>
 </section>
 
 
 <div class="container">
     <div class="hero-image"></div>
 </div>
-
 
 {% endblock content%}

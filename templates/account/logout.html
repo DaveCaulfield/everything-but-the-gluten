@@ -6,48 +6,29 @@
 
 {% block content %}
 
+<div id="content-section col-md-6  offset-md-3">
+  <div class="container hero-image">
+    <div class="row">
 
+      <div id="logout">
+        <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec text-center shadow p-3 mb-5 rounded">
 
+          <h3>{% trans "Sign out" %}</h3>
 
+          <p>{% trans 'Are you sure you want to go?' %}</p>
 
-
-
-  <div id="content-section col-md-6  offset-md-3">
-      <div class="container hero-image">
-          <div class="row">
-
-<div id="logout">
-  <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec text-center shadow p-3 mb-5 rounded">
-
-
-
-
-
-
-<!-- <div class="container mt-5">
-  <div class="row">
-    <div class="col-md-4 mt-4 offset-md-4 ">
-      <div id="logout"> -->
-      <h3>{% trans "Sign out" %}</h3>
-
-      <p>{% trans 'Are you sure you want to go?' %}</p>
-
-      <form method="post" action="{% url 'account_logout' %}">
-        {% csrf_token %}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-secondary mt-3 mb-3" type="submit">{% trans 'Sign out' %} </button>
-        <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'home' %}">Cancel</a>
-      </form>
-</div>
+          <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <button class="btn btn-secondary mt-3 mb-3" type="submit">{% trans 'Sign out' %} </button>
+            <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'home' %}">Cancel</a>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
-
-
-
-
 
 {% endblock %}
