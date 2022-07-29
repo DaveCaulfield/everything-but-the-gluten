@@ -101,6 +101,8 @@ class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateVi
     success_url = reverse_lazy('my_pending_recipes')
     success_message = "Thank You! Your recipe is awaiting approval by our team"
 
+   
+
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)

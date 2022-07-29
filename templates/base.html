@@ -43,7 +43,7 @@
       </button>
 
       <!-- navbar links -->
-      <div class="collapse navbar-collapse justify-content-end align-center " id="main-nav">
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'home' %}">Home</a>
@@ -55,31 +55,27 @@
             <a class="nav-link" href="/#about">About</a>
           </li>
 
-
-          
-
-
           {% if user.is_authenticated %}
-
-          <div class="dropdown show ml-5">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               Hi {{user.username}}
             </a>
-
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {% if user.is_superuser %}
-              <a class="dropdown-item" href="{% url 'admin_area' %}">Recipes to be Approved</a>
+              <a class="dropdown-item" href="{% url 'admin_area' %}">Recipes Waiting</a>
+              <div class="dropdown-divider"></div>
               {% endif %}
+              
               <a class="dropdown-item" href="{% url 'recipe_create' %}">Add a Recipe</a>
               <a class="dropdown-item" href="{% url 'my_published_recipes' %}">My Published Recipes</a>
               <a class="dropdown-item" href="{% url 'my_pending_recipes' %}">My Pending Recipes</a>
               <a class="dropdown-item" href="{% url 'my_favourite_recipes' %}">My Favourite Recipes</a>
+              <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'change_password' %}">Change Password</a>
               <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
             </div>
-          </div>
-
+          </li>
 
           {% else %}
           <li class="nav-item">
@@ -124,24 +120,24 @@
   <footer class="footer mt-auto dark-bg">
     <div class="container social-media">
       <ul class="social-networks">
-          <li>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                  aria-label="Visit our Facebook page (opens in new tab)"><i class="fab fa-facebook"></i></a>
-          </li>
-          <li>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                  aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
-          </li>
-          <li>
-              <a href="https://twitter.com/" target="_blank" rel="noopener"
-                  aria-label="Visit our Twitter page (opens in new tab)"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-              <a href="https://www.youtube.com/" target="blank" rel="noopener"
-                  aria-label="Visit out Youtube page (opens in new tab)"><i class="fab fa-youtube"></i></a>
-          </li>
+        <li>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+            aria-label="Visit our Facebook page (opens in new tab)"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+            aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/" target="_blank" rel="noopener"
+            aria-label="Visit our Twitter page (opens in new tab)"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="blank" rel="noopener"
+            aria-label="Visit out Youtube page (opens in new tab)"><i class="fab fa-youtube"></i></a>
+        </li>
       </ul>
-  </div>
+    </div>
   </footer>
 
 

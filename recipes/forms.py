@@ -7,6 +7,7 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
-
+class recipeForm(forms.Form):
+    title = forms.CharField(label='name', max_length=100)
 
 
