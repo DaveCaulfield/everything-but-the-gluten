@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic import FormView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm, RecipeUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Recipe, Comment
@@ -96,7 +96,7 @@ class RecipeLike(View):
 
 class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     model = Recipe
-    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
+    form_class = RecipeForm
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('my_pending_recipes')
     success_message = "Thank You! Your recipe is awaiting approval by our team"
@@ -110,8 +110,9 @@ class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateVi
 
 class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
     model = Recipe
-    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
-    template_name = 'recipe_form.html'
+    form_class = RecipeUpdateForm
+    # fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
+    template_name = 'recipe_update_form.html'
     success_url = reverse_lazy('my_pending_recipes')
     success_message = "Your recipe update will be reviewd"
 
