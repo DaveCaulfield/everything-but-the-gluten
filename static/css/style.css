@@ -1,5 +1,6 @@
 body {
   background-color: #E9F0F2;
+  /* min-width: fit-content; */
 
 }
 
@@ -123,7 +124,9 @@ h2 {
   margin-bottom: 20px;
 }
 
-
+.social-networks {
+  max-width: 100vw;
+}
 
 .social-networks {
   display: flex;
@@ -138,7 +141,8 @@ h2 {
 }
 
 .social-networks>li {
-  padding: 0px 18px;
+  /* padding: 0px 10px; */
+  justify-content: space-around;
 }
 
 .social-networks i {
