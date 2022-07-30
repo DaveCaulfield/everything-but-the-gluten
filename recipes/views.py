@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic import FormView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .forms import CommentForm, RecipeForm, RecipeUpdateForm
+from .forms import CommentForm, RecipeForm, RecipeUpdateForm, AdminRecipeUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Recipe, Comment
@@ -209,7 +209,8 @@ class AdminPendingList(generic.ListView):
 
 class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     model = Recipe
-    fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions', 'status', 'approved']
+    form_class = AdminRecipeUpdateForm
+    # fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions', 'status', 'approved']
     template_name = 'admin_recipe_form.html'
     success_url = reverse_lazy('admin_area')
     success_message = "Recipe updated"

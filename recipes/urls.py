@@ -4,7 +4,7 @@ from django.urls import path
 urlpatterns = [
     path('<slug:slug>/update/', views.RecipeUpdateView.as_view(), name='recipe_update'),
     path('admin_area/', views.AdminPendingList.as_view(), name='admin_area'),
-    path('<slug:slug>/update/', views.AdminRecipeUpdateView.as_view(), name='admin_recipe_update'),
+    path('<slug:slug>/admin_update/', views.AdminRecipeUpdateView.as_view(), name='admin_recipe_update'),
     path('change_password/', views.change_password, name='change_password'),
     path('my_published_recipes/', views.PublishedList.as_view(), name='my_published_recipes'),
     path('my_pending_recipes/', views.PendingList.as_view(), name='my_pending_recipes'),

@@ -37,3 +37,14 @@ class RecipeUpdateForm(forms.ModelForm):
         }
 
 
+class AdminRecipeUpdateForm(forms.ModelForm):
+
+    class Meta:
+        model = Recipe
+        fields = (
+            'title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions', 'status', 'approved'
+            )
+        widgets = {
+            'ingredients': SummernoteWidget(),
+            'instructions': SummernoteWidget()
+        }
