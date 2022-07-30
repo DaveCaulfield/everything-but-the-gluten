@@ -130,6 +130,7 @@ h2 {
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  
 }
 
 .social-networks a {
@@ -137,12 +138,12 @@ h2 {
 }
 
 .social-networks>li {
-  padding: 0px 25px;
+  padding: 0px 18px;
 }
 
 .social-networks i {
   font-size: 190%;
-  padding: 20px;
+  padding: 16px;
 }
 
 .social-networks i:hover {
