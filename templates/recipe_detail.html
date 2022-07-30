@@ -47,12 +47,12 @@
             <p class="card-text ">
                 {{ recipe.ingredients| safe }}
             </p>
-            <hr>
+            <hr class="mt-5">
             <h3 class="text-muted">Instructions:</h3>
             <p class="card-text ">
                 {{ recipe.instructions | safe }}
             </p>
-            <hr>
+            <hr class="mt-5">
 
 
                 <div class="row">
@@ -68,9 +68,9 @@
                                 
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
-                                        <span>Saved to <a href="{% url 'my_favourite_recipes' %}">Favourites</a></span>
+                                        <span class="text-muted">Saved to <a href="{% url 'my_favourite_recipes' %}" class="text-muted">Favourites</a></span>
                                 {% else %}
-                                <span>Add to favourites </span>
+                                <span class="text-muted">Add to favourites </span>
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
                                         class="far fa-heart"></i></button>
                                 {% endif %}
@@ -78,9 +78,10 @@
                             </form>
                             {% else %}
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary">{{ recipe.number_of_likes }}</span>
 
                             {% endif %}
-                            <!-- <span class="text-secondary">{{ recipe.number_of_likes }}</span> -->
+                          
                         </strong>
                     </div>
 
@@ -120,19 +121,20 @@
 
 
 
-            <div class="card-body ">
+            <!-- <div class="card-body "> -->
 
                 {% if user.is_authenticated %}
-                <h3 class="text-center text-muted pb-3">Comments</h3>
+                <div class="card-body ">
+                <!-- <h3 class="text-center text-muted pb-3">Comments</h3> -->
 
-                <p class="mt-5 font-weight-bold">Let us know if you tried this recipe . . .</p>
+                <strong><p class=" text-muted">Leave a comment . . </p> </strong>
                
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-secondary mt-4">Submit</button>
                 </form>
-                {% endif %}
+               
 
                     <div class="text-center mt-5 mb-3">
                         <a class="arrow-up " href="#top">
@@ -140,6 +142,8 @@
                         </a>
                     </div>
                 
+                    
+
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
@@ -148,6 +152,7 @@
                 {% endif %}
 
             </div>
+            {% endif %}
 
 
 
