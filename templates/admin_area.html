@@ -25,14 +25,14 @@
                         <div class="col-md-4">
 
                             <div class="card-deck">
-                                <div class="card mb-4 shadow p-3 mb-5 rounded" style="width: 18rem">
+                                <div class="card mb-4 shadow p-3 mb-5 rounded" >
                                     <div class="card-body">
 
                                         <a class="btn btn-secondary mt-3 mb-3" href="{% url 'admin_recipe_update' recipe.slug %}">Edit / Approve</a>
 
                                         
                                             
-                                        <a href="{% url 'recipe_detail' recipe.slug%}" class="recipe-link">
+                                        <a href="{% url 'admin_recipe_update' recipe.slug %}" class="recipe-link">
                                             <div class="image-container">
                                                 {% if "placeholder" in recipe.featured_image.url %}
                                                 <img class="card-img-top"

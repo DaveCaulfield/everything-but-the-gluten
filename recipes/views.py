@@ -101,17 +101,15 @@ class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateVi
     success_url = reverse_lazy('my_pending_recipes')
     success_message = "Thank You! Your recipe is awaiting approval by our team"
 
-   
-
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
 
+
 class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
     model = Recipe
     form_class = RecipeUpdateForm
-    # fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions']
     template_name = 'recipe_update_form.html'
     success_url = reverse_lazy('my_pending_recipes')
     success_message = "Your recipe update will be reviewd"
@@ -141,6 +139,7 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVi
         if self.request.user == recipe.author:
             return True
         return False
+
 
 
 class PublishedList(generic.ListView):
@@ -210,7 +209,6 @@ class AdminPendingList(generic.ListView):
 class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     model = Recipe
     form_class = AdminRecipeUpdateForm
-    # fields = ['title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions', 'status', 'approved']
     template_name = 'admin_recipe_form.html'
     success_url = reverse_lazy('admin_area')
     success_message = "Recipe updated"

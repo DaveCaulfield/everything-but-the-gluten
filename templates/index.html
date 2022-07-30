@@ -52,8 +52,10 @@
                     <div class="col-md-4">
 
                         <div class="card-deck">
-                            <div class="card mb-4" style="width: 20rem">
+                            <div class="card mb-4"  >
                                 <div class="card-body">
+
+                                    
 
                                     <!-- <a href="#" class="recipe-link"> -->
                                     <a href="{% url 'recipe_detail' recipe.slug%}" class="recipe-link">
@@ -71,6 +73,7 @@
                                     </a>
 
                                     <p class="author">by {{ recipe.author }}</p>
+                                    <p class="card-text text-muted h6">Posted on {{ recipe.created_on | date:"j F Y" }}</p>
                                 </div>
                             </div>
 
@@ -80,13 +83,14 @@
                                     <i class="far fa-clock card-icons"></i> Prep time: {{ recipe.preparation_time  }}
                                 </p>
                                 <p>
-                                    <i class="far fa-clock card-icons"></i> Cook time: {{ recipe.cooking_time }}
+                                    <i class="far fa-clock card-icons ml-5"></i> Cook time: {{ recipe.cooking_time }}
                                 </p>
                             </div>
 
                             <hr />
-                            <p> <i class="far fa-heart"></i>
+                            <p> <i class="fas fa-heart btn-like"></i>
                                 {{ recipe.number_of_likes }}</p>
+
 
                         </div>
                     </div>

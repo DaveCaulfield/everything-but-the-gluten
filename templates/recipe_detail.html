@@ -38,31 +38,39 @@
 
             </div>
 
-                <p class="card-text ">
-                    {{ recipe.content | safe }}
-                </p>
-                <h3 class="text-muted">Ingredients:</h3>
-                <p class="card-text ">
-                    {{ recipe.ingredients| safe }}
-                </p>
-                <h3 class="text-muted">Instructions:</h3>
-                <p class="card-text ">
-                    {{ recipe.instructions | safe }}
-                </p>
 
-               
+
+            <p class="card-text ">
+                {{ recipe.content | safe }}
+            </p>
+            <h3 class="text-muted">Ingredients:</h3>
+            <p class="card-text ">
+                {{ recipe.ingredients| safe }}
+            </p>
+            <hr>
+            <h3 class="text-muted">Instructions:</h3>
+            <p class="card-text ">
+                {{ recipe.instructions | safe }}
+            </p>
+            <hr>
+
 
                 <div class="row">
-                    <div class="col-1">
+                    <div >
+                        
                         <strong>
+                           
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                                 {% csrf_token %}
 
                                 {% if liked %}
+                                
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
+                                        <span>Saved to <a href="{% url 'my_favourite_recipes' %}">Favourites</a></span>
                                 {% else %}
+                                <span>Add to favourites </span>
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
                                         class="far fa-heart"></i></button>
                                 {% endif %}
@@ -72,24 +80,11 @@
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
 
                             {% endif %}
-                            <span class="text-secondary">{{ recipe.number_of_likes }}</span>
+                            <!-- <span class="text-secondary">{{ recipe.number_of_likes }}</span> -->
                         </strong>
-
                     </div>
 
-
-                  
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
-
-                
-
-                
+                   
             </div>
         </div>
      </div>
@@ -111,18 +106,18 @@
                             </p>
                             <span class=" text-muted font-weight-normal">
                                 <!-- The comment's created date goes here -->
-                                {{ comment.created_on | date:"l j F Y @ H:i" }}
-                                
+                                {{ comment.created_on | date:"l j F Y @ H:i" }}                               
                             </span>
-
                         </li>
                     </ul>
-                    
-
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
+
+
+
+
 
 
             <div class="card-body ">
