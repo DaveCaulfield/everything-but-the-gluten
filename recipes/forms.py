@@ -3,6 +3,7 @@ from django import forms
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
@@ -12,11 +13,16 @@ class CommentForm(forms.ModelForm):
 
 
 class RecipeForm(forms.ModelForm):
-   
+    
     class Meta:
         model = Recipe
         fields = (
-            'title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions',
+            'title',
+            'featured_image',
+            'preparation_time_minutes',
+            'cooking_time_minutes',
+            'ingredients',
+            'instructions',
             )
         widgets = {
             'ingredients': SummernoteWidget(),
@@ -29,7 +35,7 @@ class RecipeUpdateForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = (
-            'title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions',
+            'title', 'featured_image', 'preparation_time_minutes', 'cooking_time_minutes', 'ingredients', 'instructions',
             )
         widgets = {
             'ingredients': SummernoteWidget(),
@@ -42,7 +48,7 @@ class AdminRecipeUpdateForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = (
-            'title', 'featured_image', 'preparation_time', 'cooking_time', 'ingredients', 'instructions', 'status', 'approved'
+            'title', 'featured_image', 'preparation_time_minutes', 'cooking_time_minutes', 'ingredients', 'instructions', 'status', 'approved'
             )
         widgets = {
             'ingredients': SummernoteWidget(),

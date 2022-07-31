@@ -1,6 +1,7 @@
 """Imports"""
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
@@ -19,8 +20,16 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now=True)
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField('image', default='placeholder')
-    preparation_time = models.CharField(max_length=15, default=0)
-    cooking_time = models.CharField(max_length=15, default=0)
+    preparation_time_minutes = models.PositiveIntegerField(
+        default=0,
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(900)])
+    cooking_time_minutes = models.PositiveIntegerField(
+        default=0,
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(900)])
     ingredients = models.TextField()
     instructions = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
