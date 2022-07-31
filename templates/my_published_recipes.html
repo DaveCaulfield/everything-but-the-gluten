@@ -72,13 +72,13 @@
             {% endfor %}
 
         </div>
-        <div class="text-center">
+        <div class="text-center mb-5">
             {% if is_paginated %}
             {% if page_obj.has_previous %}
             <a class="btn btn-dark-outline mb-4" href="?page=1">First</a>
-            <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.previous_page_number }}"><i
-                    class="fa fa-chevron-circle-left text-muted"></i><i
-                    class="fa fa-chevron-circle-left text-muted""></i></a>
+            <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.previous_page_number }}">
+                <i class="fa fa-chevron-circle-left text-muted"></i>
+            </a>
              {% endif %}
 
              {% for num in page_obj.paginator.page_range %}
@@ -90,9 +90,9 @@
             {% endfor %}
 
             {% if page_obj.has_next %}
-            <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.next_page_number }}"><i
-                    class="fa fa-chevron-circle-right text-muted"></i><i
-                    class="fa fa-chevron-circle-right text-muted"></i></a>
+            <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.next_page_number }}">
+                <i class="fa fa-chevron-circle-right text-muted"></i>    
+            </a>
             <a class="btn btn-dark-outline mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
             {% endif %}
             {% endif %}
