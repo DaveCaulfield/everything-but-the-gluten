@@ -148,6 +148,7 @@ h2 {
 .social-networks i {
   font-size: 190%;
   padding: 16px;
+  justify-content: space-around;
 }
 
 .social-networks i:hover {
@@ -166,7 +167,6 @@ h2 {
 }
 
 
-
 .arrow-up {
   font-size: 1.8rem;
   color: grey;
@@ -182,12 +182,5 @@ html {
   scroll-behavior: smooth;
 }
 
-/* .btn-secondary  {
 
-  background-color: #595959;
-}
-
-btn-outline-secondary {
-  border-color:#595959;
-} */
 

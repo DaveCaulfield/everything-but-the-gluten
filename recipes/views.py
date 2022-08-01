@@ -208,6 +208,8 @@ class AdminPendingList(generic.ListView):
     def get_queryset(self):
         return Recipe.objects.filter(status=0).order_by('-created_on')
 
+        
+
 
 
 class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
@@ -219,3 +221,9 @@ class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.Upd
 
     def form_valid(self, form):
         return super().form_valid(form)
+
+
+
+
+
+
