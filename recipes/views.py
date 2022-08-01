@@ -96,6 +96,8 @@ class RecipeLike(View):
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
+    
+
 
 
 class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
@@ -116,7 +118,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
     form_class = RecipeUpdateForm
     template_name = 'recipe_update_form.html'
     success_url = reverse_lazy('my_pending_recipes')
-    success_message = "Your recipe update will be reviewd"
+    success_message = "Thank You! your update is awaiting approval by our team"
 
     def form_valid(self, form):
         if self.object.status == 1:
@@ -143,6 +145,10 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVi
         if self.request.user == recipe.author:
             return True
         return False
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super(RecipeDeleteView, self).delete(request, *args, **kwargs)
 
 
 

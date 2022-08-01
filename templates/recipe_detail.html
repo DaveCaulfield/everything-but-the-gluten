@@ -65,10 +65,14 @@
                                 {% csrf_token %}
 
                                 {% if liked %}
+                               
+
+                               
+                                
                                 <span class="text-muted">Saved to favourites </span>
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
-                                       
+                                            
                                         
                                 {% else %}
                                 <span class="text-muted"></i>Add to favourites </span>
@@ -152,7 +156,8 @@
 
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
+                    Thank You! Your comment is awaiting approval
+                    
                 </div>
 
                 {% endif %}
