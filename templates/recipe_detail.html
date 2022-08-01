@@ -65,13 +65,13 @@
                                 {% csrf_token %}
 
                                 {% if liked %}
-                                <span class="text-muted">saved to favourites </span>
+                                <span class="text-muted">Saved to favourites </span>
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
                                         class="fas fa-heart"></i></button>
                                        
                                         
                                 {% else %}
-                                <span class="text-muted"></i>save to favourites </span>
+                                <span class="text-muted"></i>Add to favourites </span>
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-like"><i
                                         class="far fa-heart"></i></button>
                                 {% endif %}

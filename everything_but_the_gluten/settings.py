@@ -174,3 +174,43 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+
+# django_summernote config
+# django_summernote config
+SUMMERNOTE_CONFIG = {
+    # Use this when you're already using Bootstrap/jQuery based themes.
+    'iframe': True,
+
+    # You can put custom Summernote settings
+    'summernote': {
+
+        # Change editor size - note the lack of px on the height
+        'width': '100%',
+        'height': '480',
+
+        # Use proper language setting automatically (default)
+        'lang': None,
+
+        'fontNames': ['Arial'],
+        'fontNamesIgnoreCheck': ['Arial'],
+        'fontSizes': ['16'],
+        'fontSizeUnits': ['px'],
+        # Toolbar customization
+        # https://summernote.org/deep-dive/#custom-toolbar-popover
+        'toolbar': [
+            ['font', ['bold', 'underline']],
+            ['fontname', ['fontname']],
+            ['fontsize', ['fontsize']],
+            ['fontSizes', ['16']],
+            ['style', ['p', 'h2', 'h3', 'h4', 'h5', 'h6']],
+            ['color', ['black']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['view', ['fullscreen', 'help']],
+        ],
+    },
+
+}
