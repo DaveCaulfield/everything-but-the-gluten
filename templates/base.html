@@ -70,9 +70,10 @@
 
               <a class="dropdown-item" href="{% url 'recipe_create' %}"><i class="fas fa-plus text-secondary"></i> Add a Recipe</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{% url 'my_pending_recipes' %}"><i class="fas fa-hourglass-half text-secondary"></i> My Pending Recipes</a>
-              <a class="dropdown-item" href="{% url 'my_favourite_recipes' %}"><i class="fas fa-heart text-secondary"></i>  My Favourite Recipes</a>
               <a class="dropdown-item" href="{% url 'my_published_recipes' %}"><i class="fas fa-book-open text-secondary"></i> My Published Recipes</a>
+              <a class="dropdown-item" href="{% url 'my_favourite_recipes' %}"><i class="fas fa-heart text-secondary"></i>  My Favourite Recipes</a>
+              <a class="dropdown-item" href="{% url 'my_pending_recipes' %}"><i class="fas fa-hourglass-half text-secondary"></i> My Pending Recipes</a>
+              
               
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{% url 'change_password' %}"><i class="fas fa-lock text-secondary"></i> Change Password</a>
