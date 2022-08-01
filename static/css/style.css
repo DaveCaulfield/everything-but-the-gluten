@@ -1,3 +1,6 @@
+
+
+
 body {
   background-color: #E9F0F2;
   /* min-width: fit-content; */
@@ -183,4 +186,6 @@ html {
 }
 
 
-
+.text-warning {
+  color: #A69C97;
+}
