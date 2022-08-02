@@ -117,7 +117,7 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
     model = Recipe
     form_class = RecipeUpdateForm
     template_name = 'recipe_update_form.html'
-    success_url = reverse_lazy('my_pending_recipes')
+    success_url = reverse_lazy('my_published_recipes')
     success_message = "Thank You! your update is awaiting approval by our team"
 
     def form_valid(self, form):
