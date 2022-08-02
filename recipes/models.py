@@ -5,16 +5,19 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.core.validators import RegexValidator
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
+alphanumeric = RegexValidator(r'^\w+( \w+)*$', 'Only alphanumeric characters are allowed.')
+
 
 
 class Recipe(models.Model):
     """
     Model for recipe
     """
-    title = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=200, unique=True, validators=[alphanumeric])
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipes")
     created_on = models.DateTimeField(auto_now=True)

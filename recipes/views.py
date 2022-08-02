@@ -13,6 +13,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 
 
 
+
 class RecipeList(generic.ListView):
     """
     View for the list of all published recipes
