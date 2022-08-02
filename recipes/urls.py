@@ -2,6 +2,7 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
+   
     path('<slug:slug>/update/', views.RecipeUpdateView.as_view(), name='recipe_update'),
     path('admin_area/', views.AdminPendingList.as_view(), name='admin_area'),
     path('<slug:slug>/admin_update/', views.AdminRecipeUpdateView.as_view(), name='admin_recipe_update'), 
