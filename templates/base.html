@@ -33,7 +33,7 @@
 
 
   <!-- navbar section-->
-  <nav class="navbar  navbar-expand-md navbar-light pt-2 pb-2 ">
+  <nav class="navbar  navbar-expand-md navbar-light pt-2 pb-2 col-md-8 offset-md-2">
     <div class="container-fluid container-xxl">
       <!-- navbar brand / title -->
       <a class="navbar-brand" href="{% url 'home'%}">
@@ -64,11 +64,12 @@
          
           <li class="nav-item dropdown">
         
-            <a class="btn btn-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            <a class="btn btn-secondary dropdown-toggle " href="#" id="navbarDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Hi {{user.username}}
             </a>
             
+           
             <div class="dropdown-menu " aria-labelledby="navbarDropdown">
               {% if user.is_superuser %}
               <a class="dropdown-item" href="{% url 'admin_area' %}"><i class="fas fa-hourglass-half text-warning"></i> Recipes Waiting</a>
