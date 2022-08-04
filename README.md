@@ -73,7 +73,13 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 - The navbar is fully responsive for mobile devices.
 
 
-![Navbar-mobile admin](README/assets/features/navbar-mobile.png)
+![Navbar mobile visitor](README/assets/features/navbar-mobile-vistor.png)
+
+![Navbar mobile member](README/assets/features/navbar-mobile-member.png)
+
+![Navbar mobile admin](README/assets/features/navbar-mobile.png)
+
+
 
 
 ### The landing page
