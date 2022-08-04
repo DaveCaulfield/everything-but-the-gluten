@@ -14,4 +14,58 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 ## Wireframes
 
-[Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes for mobile, tablet and desktop versions of the site. See the screen shots here -> [Wireframes](wireframe.md)
+[Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes for mobile, tablet and desktop versions of the site. See the screen shots here - [Wireframes](wireframe.md)
+
+
+
+# Features
+
+## The Nav Bar
+- There are different variations of the navbar feature depending on three possible users. 
+    - A first time vistor or a user that has not signed into the site - Visitor navbar
+    - A site member who has signed in - Members navbar
+    - an admin user who has signed in - Admin navbar
+
+
+## Visitor navbar
+
+- The visitor navbar is displayed when the site first loads. It contains navigation links to the Home page, Recipes page, About page, Login page and Register page. The sites name Everything but the Gluten is also displayed to the left and is used as a link to the homepage.
+
+![Navbar visitor](README/assets/features/navbar-visitor.png)
+
+
+## Member navbar
+
+- The Member navbar is displayed when a user has successfully signed into the site. 
+- A custom drop down menu feature greets the user displaying their username. 
+- Within the users custom drop down menu are links to:
+    - Add a Recipe - allows the user to submit a recipe
+    - My Published Recipes - displays all recipes the user has submiited and have been approved.
+    - My Favourite Recipes - displays all recipes the user has saved a s a favourite
+    - My Pending Recipes - displays all recipes the user has submitted which are still waiting on approval.
+    - Change Password - allows the user to change their password.
+    - Sign out - allows the user to sign out.
+
+- Each of the dropdown links also contain an icon to give an added visual indication to the user to assist them in navigating the site.
+
+![Navbar member](README/assets/features/navbar-member.png)
+
+
+## Admin navbar
+
+- The Admin navbar is displayed when an admin has successfully signed into the site. 
+- A custom drop down menu feature greets the admin displaying their username. 
+- Within the admin custom drop down menu are links to:
+    - Recipes Waiting - displays all recipes awaiting admin approval. 
+    - Add a Recipe - allows the user to submit a recipe
+    - My Published Recipes - displays all recipes the user has submiited and have been approved.
+    - My Favourite Recipes - displays all recipes the user has saved a s a favourite
+    - My Pending Recipes - displays all recipes the user has submitted which are still waiting on approval.
+    - Change Password - allows the user to change their password.
+    - Sign out - allows the user to sign out.
+
+- Each of the dropdown links also contain an icon to give an added visual indication to the user to assist them in navigating the site.
+
+![Navbar admin](README/assets/features/navbar-admin.png)
+
+### The landing page
