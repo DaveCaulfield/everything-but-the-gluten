@@ -29,12 +29,14 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 ## Visitor navbar
 
-- The visitor navbar is displayed when the site first loads. It contains navigation links to the Home page, Recipes page, About page, Login page and Register page. The sites name Everything but the Gluten is also displayed to the left and is used as a link to the homepage.
-
 ![Navbar visitor](README/assets/features/navbar-visitor.png)
+
+- The visitor navbar is displayed when the site first loads. It contains navigation links to the Home page, Recipes page, About page, Login page and Register page. The sites name Everything but the Gluten is also displayed to the left and is used as a link to the homepage.
 
 
 ## Member navbar
+
+![Navbar member](README/assets/features/navbar-member.png)
 
 - The Member navbar is displayed when a user has successfully signed into the site. 
 - A custom drop down menu feature greets the user displaying their username. 
@@ -48,10 +50,12 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 - Each of the dropdown links also contain an icon to give an added visual indication to the user to assist them in navigating the site.
 
-![Navbar member](README/assets/features/navbar-member.png)
-
 
 ## Admin navbar
+
+![Navbar admin](README/assets/features/navbar-admin.png)
+
+
 
 - The Admin navbar is displayed when an admin has successfully signed into the site. 
 - A custom drop down menu feature greets the admin displaying their username. 
@@ -66,6 +70,10 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 - Each of the dropdown links also contain an icon to give an added visual indication to the user to assist them in navigating the site.
 
-![Navbar admin](README/assets/features/navbar-admin.png)
+- The navbar is fully responsive for mobile devices.
+
+
+![Navbar-mobile admin](README/assets/features/navbar-mobile.png)
+
 
 ### The landing page
