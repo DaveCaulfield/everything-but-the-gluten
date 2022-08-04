@@ -12,6 +12,6 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 # User Experience (UX)
 - The user experience (UX) and user interface (UI) was considered from the start of the design process. The site aims to give the user an enjoyable experience whilst easily and intuitively navigating and interacting with the site on mobile, tablet, laptop or desktop devices.
 
-## Wireframe
+## Wireframes
 
-[Wireframe](wireframe.md)
+[Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes for mobile, tablet and desktop versions of the site. See the screen shots here -> [Wireframes](wireframe.md)
