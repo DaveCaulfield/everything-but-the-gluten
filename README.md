@@ -55,8 +55,6 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 ![Navbar admin](README/assets/features/navbar-admin.png)
 
-
-
 - The Admin navbar is displayed when an admin has successfully signed into the site. 
 - A custom drop down menu feature greets the admin displaying their username. 
 - Within the admin custom drop down menu are links to:
@@ -83,3 +81,14 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 
 ### The landing page
+
+
+![landing page1](README/assets/features/landing-page1.png) 
+
+- The landing page contains a background image of a grandmother and granddaughter in a kitchen. The main colours of the image are white and light grey, this colour tone is continued through the site and provides a subtle and neutral feel to the site. The image is also very eye catching to anyone with coeliac disease (the main target audience). The image conveys the message that even though they are baking which is a high risk to coeliacs unless strict adherance to gluten free ingredients is followed the grandmother and granddaughter are also conveying the message of trust.
+
+- A welcome messsage is displayed to the user with a descrption of the sites features.
+- A call to action button leads the user to the Recipes section.
+
+![landing mobile](README/assets/features/landing-mobile.png) 
+
