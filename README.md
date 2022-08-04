@@ -92,3 +92,9 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 ![landing mobile](README/assets/features/landing-mobile.png) 
 
+
+### The footer
+
+![footer](README/assets/features/footer.png) 
+
+A subtle footer contains social media icon links in the same color style as the rest of the site. The icon color changes to silver when hovered on.
