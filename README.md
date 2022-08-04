@@ -1,7 +1,7 @@
 # Everything but the Gluten
 
 Everything but the gluten is a recipe sharing website helping people find and share tasty gluten free recipes. The aim of the site is to help people living with coeliac disease on their life long gluten free journey.
-Users are able to sign up to create their own personal account where they can post recipes, comment on recipes and save the their favourite recipes.
+Users are able to sign up to create their own personal account where they can post recipes, comment on recipes and save their favourite recipes.
 
 
 
@@ -14,4 +14,4 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 ## Wireframe
 
--  ![Wireframe](docs/readme-images/zapp-wireframe.png)
+[Wireframe](wireframe.md)
