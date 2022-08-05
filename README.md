@@ -164,14 +164,14 @@ A subtle footer contains social media icon links in the same color style as the 
 - My Published Recipe Page displays the registered members recipes that have been approved and are now published on the site.
 
 
-## Favourite Recipes Page
+### Favourite Recipes Page
 
 ![favourites](README/assets/features/favourites.png) 
 
 - My Favourite Recipe page displays all the recipes that the user has marked as a favourite recipe.
 
 
-## Recipe Details Page
+### Recipe Details Page
 
 ![recipe details](README/assets/features/recipe-detail-a.png) 
 - The Recipe Details page gives the full details of a recipe.
@@ -184,17 +184,40 @@ A subtle footer contains social media icon links in the same color style as the 
 - A chat icon is also displayed and indicates the number of comments the recipe has received.
 
 ![recipe details](README/assets/features/recipe-detail-b.png) 
+
 ![recipe details](README/assets/features/recipe-detail-c.png) 
 - The recipe details contain an image, a list of Ingredients and a list of Instruction steps.
 
 
-## comments
+### comments
 
 ![comments](README/assets/features/comments.png) 
 - The Comments area is at the end of the recipe details page.
 - The Comments area is only available to registered members.
 - Only members can leave comments on recipes.
 - Members comments are posted without the need for admin approval as it was felt this gives are more engaging experience to the user interacting with the site.
+
+
+### Edit Recipe
+
+![Edit Recipe](README/assets/features/edit-recipe-1.png) 
+![Edit Recipe](README/assets/features/edit-recipe-2.png) 
+- The edit recipe feature is availble to edit a recipe.
+- A member can edit any recipe of which they are the author by selecting the Edit Button on the recipe detail page.
+- A recipe form with the poulated details of the recipe is displayed which allows the author to edit the recipe. 
+- When a recipe is updated it is submitted for review by an admin user before being approved. This is to ensure all recipes on the site only contain gluten free ingredients.
+
+![update message](README/assets/features/update-message.png) 
+-  A message is displayed to user when they submit an update or edit to a recipe.
+
+
+### Delete Recipe
+
+![Delete Recipe](README/assets/features/delete-recipe.png) 
+- A member can delete their own recipe by selecting the Delete Button on the recipe details page.
+- A message box displays a confirmation option to the user with the recipe title in it.
+
+
 
 
 ## Admin User - Recipes Waiting Page
@@ -211,8 +234,21 @@ A subtle footer contains social media icon links in the same color style as the 
 ![admin approval](README/assets/features/admin-approved-1.png)
 ![admin approval](README/assets/features/admin-approved-2.png)
 
-- The admin user can then select a recipe tahts awaitng approval, review it and then set the recipe at the bottom of the recipe form to Published & Approved.
+- The admin user can then select a recipe thats awaitng approval, review it and then set the recipe at the bottom of the recipe form to Published & Approved.
 - Once approved the recipes will be published on the site for all users to see.
 
 
 
+## Change Password
+
+![Change Password](README/assets/features/change-password.png)
+
+- The Change Password page allows a member to change their own password by filling out the password form
+
+
+## Sign out
+
+![Sign out](README/assets/features/sign-out.png)
+
+- The Sign out page displays when the user selects to sign out from the navigation menu. 
+- A message box displays a confirm sign out or cancel sign out button to the user.
