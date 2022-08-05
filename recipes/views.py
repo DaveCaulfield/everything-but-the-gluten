@@ -3,7 +3,8 @@ from django.views import generic, View
 from django.views.generic import FormView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .forms import CommentForm, RecipeForm, RecipeUpdateForm, AdminRecipeUpdateForm
+from .forms import CommentForm, RecipeForm
+from .forms import RecipeUpdateForm, AdminRecipeUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Recipe, Comment
@@ -12,20 +13,18 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
 
 
-
-
 class RecipeList(generic.ListView):
     """
     View for the list of all published recipes
     """
     model = Recipe
-    queryset = Recipe.objects.filter(status=1).order_by('-created_on')  
+    queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipe_page_list.html'
     paginate_by = 6
 
 
 def home(request):
-    return render(request, 'index.html') 
+    return render(request, 'index.html')
 
 
 class RecipeDetail(View):
@@ -60,7 +59,7 @@ class RecipeDetail(View):
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
@@ -82,7 +81,7 @@ class RecipeDetail(View):
                 "liked": liked,
                 "comment_form": CommentForm(),
             },
-        )       
+        )
 
 
 class RecipeLike(View):
@@ -97,11 +96,11 @@ class RecipeLike(View):
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
-    
 
-
-
-class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
+class RecipeCreateView(
+                       LoginRequiredMixin,
+                       SuccessMessageMixin,
+                       generic.CreateView):
     model = Recipe
     form_class = RecipeForm
     template_name = 'recipe_form.html'
@@ -113,8 +112,11 @@ class RecipeCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateVi
         return super().form_valid(form)
 
 
-
-class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
+class RecipeUpdateView(
+                       LoginRequiredMixin,
+                       UserPassesTestMixin,
+                       SuccessMessageMixin,
+                       generic.UpdateView):
     model = Recipe
     form_class = RecipeUpdateForm
     template_name = 'recipe_update_form.html'
@@ -133,14 +135,15 @@ class RecipeUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
         return False
 
 
-
-class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class RecipeDeleteView(
+                       LoginRequiredMixin,
+                       UserPassesTestMixin,
+                       generic.DeleteView):
     model = Recipe
     template_name = 'recipe_confirm_delete.html'
     success_url = reverse_lazy('my_published_recipes')
     success_message = "Your recipe has been deleted"
 
-     
     def test_func(self):
         recipe = self.get_object()
         if self.request.user == recipe.author:
@@ -152,32 +155,33 @@ class RecipeDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVi
         return super(RecipeDeleteView, self).delete(request, *args, **kwargs)
 
 
-
 class PublishedList(generic.ListView):
 
-    model = Recipe  
+    model = Recipe
     template_name = 'my_published_recipes.html'
     paginate_by = 3
 
     def get_queryset(self):
-        return Recipe.objects.filter(author=self.request.user, status=1).order_by('-created_on')
-
+        return Recipe.objects.filter(
+                                     author=self.request.user,
+                                     status=1).order_by('-created_on')
 
 
 class PendingList(generic.ListView):
 
-    model = Recipe  
+    model = Recipe
     template_name = 'my_pending_recipes.html'
     paginate_by = 3
-    
-    def get_queryset(self):
-        return Recipe.objects.filter(author=self.request.user, status=0).order_by('-created_on')
 
+    def get_queryset(self):
+        return Recipe.objects.filter(
+                                     author=self.request.user,
+                                     status=0).order_by('-created_on')
 
 
 class FavouriteList(generic.ListView):
 
-    model = Recipe  
+    model = Recipe
     template_name = 'my_favourite_recipes.html'
     paginate_by = 3
 
@@ -187,17 +191,21 @@ class FavouriteList(generic.ListView):
         return queryset
 
 
-
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request, user)  # Important!
-            messages.success(request, 'Your password was successfully updated!')
+            messages.success(
+                             request,
+                             'Your password was successfully updated!')
+
             return redirect('change_password')
+
         else:
             messages.error(request, 'Please correct the error below.')
+
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'change_password.html', {
@@ -205,21 +213,20 @@ def change_password(request):
     })
 
 
-
 class AdminPendingList(generic.ListView):
 
-    model = Recipe  
+    model = Recipe
     template_name = 'admin_area.html'
     paginate_by = 3
-    
+
     def get_queryset(self):
         return Recipe.objects.filter(status=0).order_by('-created_on')
 
-        
 
-
-
-class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
+class AdminRecipeUpdateView(
+                            LoginRequiredMixin,
+                            SuccessMessageMixin,
+                            generic.UpdateView):
     model = Recipe
     form_class = AdminRecipeUpdateForm
     template_name = 'admin_recipe_form.html'
@@ -228,9 +235,3 @@ class AdminRecipeUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.Upd
 
     def form_valid(self, form):
         return super().form_valid(form)
-
-
-
-
-
-

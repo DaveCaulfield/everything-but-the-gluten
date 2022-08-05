@@ -1,6 +1,3 @@
-
-
-
 body {
   background-color: #E9F0F2;
   /* min-width: fit-content; */
@@ -21,8 +18,6 @@ h2 {
   font-size: 1.5rem;
 }
 
-
-
 .hero-image {
   background-image: url("https://res.cloudinary.com/dwobtnj0v/image/upload/v1658523309/static/img/home_bg.79b8670b4390.jpg");
   /*The image used */
@@ -39,7 +34,6 @@ h2 {
 
 }
 
-
 .img-holder {
   object-fit: contain;
   height: 100%;
@@ -53,7 +47,6 @@ h2 {
 .add_rec {
   background-color: #E9F0F2;
 }
-
 
 .background_img {
   background-image: url("https://res.cloudinary.com/dwobtnj0v/image/upload/v1658592421/img_1_v07gwe.jpg");
@@ -74,7 +67,6 @@ h2 {
   margin-top: 15%;
   opacity: 0.9;
 }
-
 
 .card {
   background-color: #f3f7f8ee;
@@ -102,8 +94,6 @@ h2 {
   margin-left: 5%;
 }
 
-
-
 .btn-like {
   color: #E84610;
   border: none;
@@ -126,8 +116,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  list-style-type: none;
-  
+  list-style-type: none; 
 }
 
 .social-networks a {
@@ -149,7 +138,6 @@ h2 {
   color: silver;
 }
 
-
 .img_detail {
   /* width: 80%; */
   /* object-fit: cover; */
@@ -169,13 +157,11 @@ h2 {
 
 .arrow-up>i:hover {
   color: silver;
-
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 
 .text-warning {
   color: #A69C97;
