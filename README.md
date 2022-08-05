@@ -129,7 +129,41 @@ A subtle footer contains social media icon links in the same color style as the 
 ![Add Recipe](README/assets/features/recipe-form-2.png) 
 
 - The Add Recipe feature uses a form to allow registered memebers to submit recipes.
-- A Summernote editor has been add to to the ingredients and instructions fields.
-- The Summernote editors has been customised 
+- A Summernote editor has been add to the ingredients and instructions fields.
 
 
+### Input Validation
+
+![Add Recipe](README/assets/features/form-validation.png) 
+
+- Input validation has been applied allowing only alphanumeric characters in the title, only numbers in the preparation and cooking time fields.
+- All fields are required to be filled.
+- Feedback messages are displayed to the user if any field is not filled out correctly.
+
+
+### Success Message
+
+![Awaiting approval](README/assets/features/awaiting-message.png) 
+
+- When a recipe has been successfully submitted a message is displayed indicating that the recipe is now awaiting approval.
+
+### Pending Recipes Page
+
+![pending](README/assets/features/pending.png) 
+
+- My Pending Recipe Page displays the registered members recipes that have been submitted and are awaiting approval.
+- After a user has successfully submitted a recipe they are redirected to their Pending Recipes page where they can see a list of any recipes they have submitted that are awaiting approval.
+
+
+### Published Recipes Page
+
+![pending](README/assets/features/published-recipes.png) 
+
+- My Published Recipe Page displays the registered members recipes that have been approved and are now published on the site.
+
+
+## Favourite Recipes Page
+
+![favourites](README/assets/features/favourites.png) 
+
+- My Favourite Recipe page displays all the recipes that the user has marked as a favourite recipe.
