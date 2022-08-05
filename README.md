@@ -1,6 +1,6 @@
 # Everything but the Gluten
 
-Everything but the gluten is a recipe sharing website helping people find and share tasty gluten free recipes. The aim of the site is to help people living with coeliac disease on their life long gluten free journey.
+Everything but the gluten is a recipe sharing website helping people find and share gluten free recipes. The aim of the site is to help people living with coeliac disease on their life long gluten free journey.
 Users are able to sign up to create their own personal account where they can post recipes, comment on recipes and save their favourite recipes.
 
 
@@ -68,7 +68,7 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 - Each of the dropdown links also contain an icon to give an added visual indication to the user to assist them in navigating the site.
 
-- The navbar is fully responsive for mobile devices.
+- The navbar is fully responsive for mobile and tablet devices.
 
 
 ![Navbar mobile visitor](README/assets/features/navbar-mobile-vistor.png)
@@ -89,6 +89,7 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 - A welcome messsage is displayed to the user with a descrption of the sites features.
 - A call to action button leads the user to the Recipes section.
+- The landing page is fully responsive for mobile and tablet devices.
 
 ![landing mobile](README/assets/features/landing-mobile.png) 
 
@@ -98,3 +99,37 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 ![footer](README/assets/features/footer.png) 
 
 A subtle footer contains social media icon links in the same color style as the rest of the site. The icon color changes to silver when hovered on.
+
+
+### The Recipes page
+
+![recipe page](README/assets/features/recipe-page.png) 
+
+- The recipes page displays all recipes that have been submitted and approved.
+- The recipes are displayed on bootstrap styled cards with a shadow effect added to highlight each of them.
+- All vistors to the site can view the displayed recipes.
+- All vistors to the site can click on a recipe to bring them to the recipe details page.
+- The recipe page uses pagination to display 6 recipes at a time.
+
+
+### The Pagination Menu
+
+![pagination menu](README/assets/features/pagination-menu.png) 
+
+- The pagination menu sits below the displayed recipes. It provides an easy to use navigation systme to the user.
+- A first page and last page button allow easy and quick navigation to the first or last page.
+- A next page and previous page arrow icon allows the user to quickly browse forward or back through pages of recipes.
+- The current page being displayed is also highlighted to the user.
+- This pagination menu gives the user an enjoyable and natural user experience.
+
+
+### Add Recipe
+
+![Add Recipe](README/assets/features/recipe-form-1.png) 
+![Add Recipe](README/assets/features/recipe-form-2.png) 
+
+- The Add Recipe feature uses a form to allow registered memebers to submit recipes.
+- A Summernote editor has been add to to the ingredients and instructions fields.
+- The Summernote editors has been customised 
+
+
