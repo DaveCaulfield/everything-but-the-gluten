@@ -80,7 +80,7 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 
 
-### The landing page
+## The landing page
 
 
 ![landing page1](README/assets/features/landing-page1.png) 
@@ -94,14 +94,14 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 ![landing mobile](README/assets/features/landing-mobile.png) 
 
 
-### The footer
+## The footer
 
 ![footer](README/assets/features/footer.png) 
 
 A subtle footer contains social media icon links in the same color style as the rest of the site. The icon color changes to silver when hovered on.
 
 
-### The Recipes page
+## The Recipes page
 
 ![recipe page](README/assets/features/recipe-page.png) 
 
@@ -112,7 +112,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - The recipe page uses pagination to display 6 recipes at a time.
 
 
-### The Pagination Menu
+## The Pagination Menu
 
 ![pagination menu](README/assets/features/pagination-menu.png) 
 
@@ -123,7 +123,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - This pagination menu gives the user an enjoyable and natural user experience.
 
 
-### Add Recipe
+## Add Recipe
 
 ![Add Recipe](README/assets/features/recipe-form-1.png) 
 ![Add Recipe](README/assets/features/recipe-form-2.png) 
@@ -133,7 +133,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - An image file can be uploaded with the recipe, if a file is not uploaded by the user then a default placeholder image will be used.
 
 
-### Input Validation
+## Input Validation
 
 ![Add Recipe](README/assets/features/form-validation.png) 
 
@@ -142,14 +142,14 @@ A subtle footer contains social media icon links in the same color style as the 
 - Feedback messages are displayed to the user if any field is not filled out correctly.
 
 
-### Success Message
+## Success Message
 
 ![Awaiting approval](README/assets/features/awaiting-message.png) 
 
 - When a recipe has been successfully submitted a success message is displayed indicating that the recipe is now awaiting approval.
 - Recipes are reviewed by administrator to ensure they only contain gluten free ingredients.
 
-### Pending Recipes Page
+## Pending Recipes Page
 
 ![pending](README/assets/features/pending.png) 
 
@@ -157,21 +157,21 @@ A subtle footer contains social media icon links in the same color style as the 
 - After a user has successfully submitted a recipe they are redirected to their Pending Recipes page where they can see a list of any recipes they have submitted that are awaiting approval.
 
 
-### Published Recipes Page
+## Published Recipes Page
 
 ![pending](README/assets/features/published-recipes.png) 
 
 - My Published Recipe Page displays the registered members recipes that have been approved and are now published on the site.
 
 
-### Favourite Recipes Page
+## Favourite Recipes Page
 
 ![favourites](README/assets/features/favourites.png) 
 
 - My Favourite Recipe page displays all the recipes that the user has marked as a favourite recipe.
 
 
-### Recipe Details Page
+## Recipe Details Page
 
 ![recipe details](README/assets/features/recipe-detail-a.png) 
 - The Recipe Details page gives the full details of a recipe.
@@ -189,7 +189,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - The recipe details contain an image, a list of Ingredients and a list of Instruction steps.
 
 
-### comments
+## comments
 
 ![comments](README/assets/features/comments.png) 
 - The Comments area is at the end of the recipe details page.
@@ -198,7 +198,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - Members comments are posted without the need for admin approval as it was felt this gives are more engaging experience to the user interacting with the site.
 
 
-### Edit Recipe
+## Edit Recipe
 
 ![Edit Recipe](README/assets/features/edit-recipe-1.png) 
 ![Edit Recipe](README/assets/features/edit-recipe-2.png) 
@@ -211,16 +211,14 @@ A subtle footer contains social media icon links in the same color style as the 
 -  A message is displayed to user when they submit an update or edit to a recipe.
 
 
-### Delete Recipe
+## Delete Recipe
 
 ![Delete Recipe](README/assets/features/delete-recipe.png) 
 - A member can delete their own recipe by selecting the Delete Button on the recipe details page.
 - A message box displays a confirmation option to the user with the recipe title in it.
 
 
-
-
-## Admin User - Recipes Waiting Page
+## Admin User - Recipes Waiting 
 
 ![admin menu](README/assets/features/admin-menu.png) 
 

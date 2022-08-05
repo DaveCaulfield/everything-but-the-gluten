@@ -5,25 +5,24 @@
 
 <section id="add_recipe">
     <div class="background_img">
-        <div id="content-section col-md-6 mt-2 offset-md-3">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec shadow p-3 mb-5 rounded">
-                        <h3 class="text-center text-muted">Recipe Form</h3>
-                        <form class="signup" id="signup_form" method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec shadow p-3 mb-5 rounded">
+                    <h3 class="text-center text-muted">Recipe Form</h3>
+                    <form class="signup" id="signup_form" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
 
-                            {{ form | crispy }}
-                            {{ form.field.ingredients | safe }}
-                            {{ form.field.instructions | safe }}
+                        {{ form | crispy }}
+                        {{ form.field.ingredients | safe }}
+                        {{ form.field.instructions | safe }}
 
-                            <button class="btn btn-secondary mt-3 mb-3" type="submit">Submit</button>
-                            <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'home' %}">Cancel</a>
-                        </form>
-                    </div>
+                        <button class="btn btn-secondary mt-3 mb-3" type="submit">Submit</button>
+                        <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'home' %}">Cancel</a>
+                    </form>
                 </div>
             </div>
         </div>
+
     </div>
     <div class="background_img"></div>
 </section>
