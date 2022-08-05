@@ -128,8 +128,9 @@ A subtle footer contains social media icon links in the same color style as the 
 ![Add Recipe](README/assets/features/recipe-form-1.png) 
 ![Add Recipe](README/assets/features/recipe-form-2.png) 
 
-- The Add Recipe feature uses a form to allow registered memebers to submit recipes.
+- The Add Recipe feature uses a form to allow registered members to submit recipes.
 - A Summernote editor has been add to the ingredients and instructions fields.
+- An image file can be uploaded with the recipe, if a file is not uploaded by the user then a default placeholder image will be used.
 
 
 ### Input Validation
@@ -145,7 +146,8 @@ A subtle footer contains social media icon links in the same color style as the 
 
 ![Awaiting approval](README/assets/features/awaiting-message.png) 
 
-- When a recipe has been successfully submitted a message is displayed indicating that the recipe is now awaiting approval.
+- When a recipe has been successfully submitted a success message is displayed indicating that the recipe is now awaiting approval.
+- Recipes are reviewed by administrator to ensure they only contain gluten free ingredients.
 
 ### Pending Recipes Page
 
@@ -167,3 +169,50 @@ A subtle footer contains social media icon links in the same color style as the 
 ![favourites](README/assets/features/favourites.png) 
 
 - My Favourite Recipe page displays all the recipes that the user has marked as a favourite recipe.
+
+
+## Recipe Details Page
+
+![recipe details](README/assets/features/recipe-detail-a.png) 
+- The Recipe Details page gives the full details of a recipe.
+- The top of the page dislays the recipe title and author.
+- If the user is the author of the recipe they are given the option of anEdit button anda Delet button. This is only displayed if the user is the author of the recipe.
+- The option to Add to Favourites is also displayed allowing the user to save a recipe as a favourite by clicking on the heart outline icon. 
+
+![recipe details](README/assets/features/saved-to-favourites.png) 
+- When the user has added the recipe to their favourites the icon and text change to reflect this.
+- A chat icon is also displayed and indicates the number of comments the recipe has received.
+
+![recipe details](README/assets/features/recipe-detail-b.png) 
+![recipe details](README/assets/features/recipe-detail-c.png) 
+- The recipe details contain an image, a list of Ingredients and a list of Instruction steps.
+
+
+## comments
+
+![comments](README/assets/features/comments.png) 
+- The Comments area is at the end of the recipe details page.
+- The Comments area is only available to registered members.
+- Only members can leave comments on recipes.
+- Members comments are posted without the need for admin approval as it was felt this gives are more engaging experience to the user interacting with the site.
+
+
+## Admin User - Recipes Waiting Page
+
+![admin menu](README/assets/features/admin-menu.png) 
+
+![recipes waiting](README/assets/features/recipes-waiting.png) 
+
+- The admin user has access to a Recipes Waiting page that allow them to see any recipes that are awaiting approval.
+
+
+## Admin User - Recipe Approval
+
+![admin approval](README/assets/features/admin-approved-1.png)
+![admin approval](README/assets/features/admin-approved-2.png)
+
+- The admin user can then select a recipe tahts awaitng approval, review it and then set the recipe at the bottom of the recipe form to Published & Approved.
+- Once approved the recipes will be published on the site for all users to see.
+
+
+
