@@ -9,32 +9,24 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 ![landing page](README/assets/responsive.png)
 
-# User Experience (UX)
-- The user experience (UX) and user interface (UI) was considered from the start of the design process. The site aims to give the user an enjoyable experience whilst easily and intuitively navigating and interacting with the site on mobile, tablet, laptop or desktop devices.
 
-## Wireframes
+## Features
 
-[Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes for mobile, tablet and desktop versions of the site. See the screen shots here - [Wireframes](wireframe.md)
-
-
-
-# Features
-
-## The Nav Bar
+### The Nav Bar
 - There are different variations of the navbar feature depending on three possible users. 
     - A first time vistor or a user that has not signed into the site - Visitor navbar
     - A site member who has signed in - Members navbar
     - an admin user who has signed in - Admin navbar
 
 
-## Visitor navbar
+### Visitor navbar
 
 ![Navbar visitor](README/assets/features/navbar-visitor.png)
 
 - The visitor navbar is displayed when the site first loads. It contains navigation links to the Home page, Recipes page, About page, Login page and Register page. The sites name Everything but the Gluten is also displayed to the left and is used as a link to the homepage.
 
 
-## Member navbar
+### Member navbar
 
 ![Navbar member](README/assets/features/navbar-member.png)
 
@@ -51,7 +43,7 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 - Each of the dropdown links also contain an icon to give an added visual indication to the user to assist them in navigating the site.
 
 
-## Admin navbar
+### Admin navbar
 
 ![Navbar admin](README/assets/features/navbar-admin.png)
 
@@ -80,7 +72,7 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 
 
 
-## The landing page
+### The landing page
 
 
 ![landing page1](README/assets/features/landing-page1.png) 
@@ -94,14 +86,14 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 ![landing mobile](README/assets/features/landing-mobile.png) 
 
 
-## The footer
+### The footer
 
 ![footer](README/assets/features/footer.png) 
 
 A subtle footer contains social media icon links in the same color style as the rest of the site. The icon color changes to silver when hovered on.
 
 
-## The Recipes page
+### The Recipes page
 
 ![recipe page](README/assets/features/recipe-page.png) 
 
@@ -112,7 +104,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - The recipe page uses pagination to display 6 recipes at a time.
 
 
-## The Pagination Menu
+### The Pagination Menu
 
 ![pagination menu](README/assets/features/pagination-menu.png) 
 
@@ -123,7 +115,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - This pagination menu gives the user an enjoyable and natural user experience.
 
 
-## Add Recipe
+### Add Recipe
 
 ![Add Recipe](README/assets/features/recipe-form-1.png) 
 ![Add Recipe](README/assets/features/recipe-form-2.png) 
@@ -133,7 +125,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - An image file can be uploaded with the recipe, if a file is not uploaded by the user then a default placeholder image will be used.
 
 
-## Input Validation
+### Input Validation
 
 ![Add Recipe](README/assets/features/form-validation.png) 
 
@@ -142,14 +134,14 @@ A subtle footer contains social media icon links in the same color style as the 
 - Feedback messages are displayed to the user if any field is not filled out correctly.
 
 
-## Success Message
+### Success Message
 
 ![Awaiting approval](README/assets/features/awaiting-message.png) 
 
 - When a recipe has been successfully submitted a success message is displayed indicating that the recipe is now awaiting approval.
 - Recipes are reviewed by administrator to ensure they only contain gluten free ingredients.
 
-## Pending Recipes Page
+### Pending Recipes Page
 
 ![pending](README/assets/features/pending.png) 
 
@@ -157,21 +149,21 @@ A subtle footer contains social media icon links in the same color style as the 
 - After a user has successfully submitted a recipe they are redirected to their Pending Recipes page where they can see a list of any recipes they have submitted that are awaiting approval.
 
 
-## Published Recipes Page
+### Published Recipes Page
 
 ![pending](README/assets/features/published-recipes.png) 
 
 - My Published Recipe Page displays the registered members recipes that have been approved and are now published on the site.
 
 
-## Favourite Recipes Page
+### Favourite Recipes Page
 
 ![favourites](README/assets/features/favourites.png) 
 
 - My Favourite Recipe page displays all the recipes that the user has marked as a favourite recipe.
 
 
-## Recipe Details Page
+### Recipe Details Page
 
 ![recipe details](README/assets/features/recipe-detail-a.png) 
 - The Recipe Details page gives the full details of a recipe.
@@ -189,7 +181,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - The recipe details contain an image, a list of Ingredients and a list of Instruction steps.
 
 
-## comments
+### comments
 
 ![comments](README/assets/features/comments.png) 
 - The Comments area is at the end of the recipe details page.
@@ -198,7 +190,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - Members comments are posted without the need for admin approval as it was felt this gives are more engaging experience to the user interacting with the site.
 
 
-## Edit Recipe
+### Edit Recipe
 
 ![Edit Recipe](README/assets/features/edit-recipe-1.png) 
 ![Edit Recipe](README/assets/features/edit-recipe-2.png) 
@@ -211,14 +203,14 @@ A subtle footer contains social media icon links in the same color style as the 
 -  A message is displayed to user when they submit an update or edit to a recipe.
 
 
-## Delete Recipe
+### Delete Recipe
 
 ![Delete Recipe](README/assets/features/delete-recipe.png) 
 - A member can delete their own recipe by selecting the Delete Button on the recipe details page.
 - A message box displays a confirmation option to the user with the recipe title in it.
 
 
-## Admin User - Recipes Waiting 
+### Admin User - Recipes Waiting 
 
 ![admin menu](README/assets/features/admin-menu.png) 
 
@@ -227,7 +219,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - The admin user has access to a Recipes Waiting page that allow them to see any recipes that are awaiting approval.
 
 
-## Admin User - Recipe Approval
+### Admin User - Recipe Approval
 
 ![admin approval](README/assets/features/admin-approved-1.png)
 ![admin approval](README/assets/features/admin-approved-2.png)
@@ -237,14 +229,14 @@ A subtle footer contains social media icon links in the same color style as the 
 
 
 
-## Change Password
+### Change Password
 
 ![Change Password](README/assets/features/change-password.png)
 
 - The Change Password page allows a member to change their own password by filling out the password form
 
 
-## Sign out
+### Sign out
 
 ![Sign out](README/assets/features/sign-out.png)
 
@@ -252,7 +244,100 @@ A subtle footer contains social media icon links in the same color style as the 
 - A message box displays a confirm sign out or cancel sign out button to the user.
 
 
-# User Stories
+
+## Design
+
+### User Experience (UX)
+- The user experience (UX) and user interface (UI) was considered from the start of the design process. The site aims to give the user an enjoyable experience whilst easily and intuitively navigating and interacting with the site on mobile, tablet, laptop or desktop devices.
+
+### Colour scheme
+
+- Adobe color was used to extract the background colour #E9F0F2 from a background image used in the site.
+- #E9F0F2 is also used as the background colour for the navbar and footer giving a an uncluttered and neutral feel to the site.
+
+![colour](README/assets/color.png)
+
+- The background image is used on the add recipe form page and update recipe form page. 
+- Only the background colour #E9F0F2 is used on the recipe display pages to allow the recipes to stand out to the user.
+
+
+- The font colour used is bootstraps secondary grey	#6C757D
+
+
+
+
+
+
+
+
+
+
+### Wireframes
+
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for mobile, tablet and desktop versions of the site. See the screen shots here [Wireframes](wireframe.md)
+
+
+## Wireframes
+
+
+### Mobile
+
+-  ![Wireframe](README/wireframe/wf-mobile-1.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-2.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-3.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-4.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-5.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-6.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-7.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-8.PNG)
+-  ![Wireframe](README/wireframe/wf-mobile-9.PNG)
+
+[Back to top](#wireframes)
+
+### Tablet
+
+-  ![Wireframe](README/wireframe/wf-tablet-1.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-2.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-3.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-4.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-5.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-6.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-7.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-8.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-9.PNG)
+-  ![Wireframe](README/wireframe/wf-tablet-10.PNG)
+
+[Back to top](#wireframes)
+
+### Desktop
+
+-  ![Wireframe](README/wireframe/wf-desktop-1.PNG)
+-  ![Wireframe](README/wireframe/wf-desktop-2.PNG)
+-  ![Wireframe](README/wireframe/wf-desktop-3.PNG)
+-  ![Wireframe](README/wireframe/wf-desktop-4.PNG)
+-  ![Wireframe](README/wireframe/wf-desktop-5.PNG)
+-  ![Wireframe](README/wireframe/wf-desktop-6.PNG)
+-  ![Wireframe](README/wireframe/wf-desktop-7.PNG)
+
+
+[Back to top](#wireframes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## User Stories
 
 As a site visitor 
 - I can view a pagination display of recipes so that I can easily see posted recipes.
@@ -278,7 +363,7 @@ As a site admin
 - I can reset account passwords so that an account can be unlocked if a member forgets their password.
 
 
-# Agile Develeopment 
+## Agile Develeopment 
 
 - The Agile methodology was used to manage developmenet of this project by breaking down the requirements and features for the site into user stories. 
 - Acceptance criterias were assingned to each of the user stories 
@@ -286,8 +371,8 @@ As a site admin
 
 ![user-story](README/assets/user-story.png)
 
-- Githubs kanban feature was used for easy tracking of user stories.
-- A template was created for adding the user stories which populated them into the To Do column of the kanban board.
+- Githubs project kanban feature was used for easy tracking of user stories.
+- A template was created for adding the user stories which populated them as issue into the To Do column of the kanban board.
 - User stories were moved into the In Progress column while being worked on.
 - Once all tasks belonging to a user story were completed and the acceptence criteria was met the user story was moved into the Done Column.
 

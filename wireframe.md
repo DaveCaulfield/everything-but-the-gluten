@@ -1,10 +1,10 @@
 
-# Everything but the Gluten 
-
-# Wireframes
 
 
-# Mobile
+## Wireframes
+
+
+### Mobile
 
 -  ![Wireframe](README/wireframe/wf-mobile-1.PNG)
 -  ![Wireframe](README/wireframe/wf-mobile-2.PNG)
@@ -18,7 +18,7 @@
 
 [Back to top](#wireframes)
 
-# Tablet
+### Tablet
 
 -  ![Wireframe](README/wireframe/wf-tablet-1.PNG)
 -  ![Wireframe](README/wireframe/wf-tablet-2.PNG)
@@ -33,7 +33,7 @@
 
 [Back to top](#wireframes)
 
-# Desktop
+### Desktop
 
 -  ![Wireframe](README/wireframe/wf-desktop-1.PNG)
 -  ![Wireframe](README/wireframe/wf-desktop-2.PNG)

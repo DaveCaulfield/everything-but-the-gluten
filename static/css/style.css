@@ -1,14 +1,10 @@
 body {
   background-color: #E9F0F2;
-  /* min-width: fit-content; */
-
 }
 
 .navbar {
   background-color: #E9F0F2;
-
 }
-
 
 #logout {
   margin-top: 28vh;
@@ -31,7 +27,6 @@ h2 {
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-
 }
 
 .img-holder {
@@ -124,7 +119,6 @@ h2 {
 }
 
 .social-networks>li {
-  /* padding: 0px 10px; */
   justify-content: space-around;
 }
 
@@ -139,8 +133,6 @@ h2 {
 }
 
 .img_detail {
-  /* width: 80%; */
-  /* object-fit: cover; */
   object-fit: cover;
 }
 
