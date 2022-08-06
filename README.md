@@ -250,3 +250,29 @@ A subtle footer contains social media icon links in the same color style as the 
 
 - The Sign out page displays when the user selects to sign out from the navigation menu. 
 - A message box displays a confirm sign out or cancel sign out button to the user.
+
+
+#Agile Develeopment / User Stories
+
+As a site visitor 
+- I can view a pagination display of recipes so that I can easily see posted recipes.
+- I can see the number of likes a recipe has  so that I can easily view favorited recipes
+- I can click on a recipe so that I can see all the ingredients and instructions
+- I can create an account so that I can post Recipes, Likes and Comments 
+
+As a site member 
+- I can sign into my account so that I can access the features available to members
+- I can post a recipe so that I can share recipes on the site
+- I can edit my recipes so that I can make changes if needed
+- I can delete my recipes so that I can remove my recipes from the site if needed.
+- I can Like/Unlike a recipe so that favorite recipes are highlighted 
+- I can change my password so that I can change my password if needed
+- I can display my published recipes so that I can easily see all recipes I have posted
+- I can write comments on recipes so that I can interact with the community.
+- I can see my Pending recipes so that I can easily track my recipes
+- I can see my Favourite recipes so that I can easily access my favourite recipes
+
+
+As a site admin 
+- I can approve submitted recipe posts so that I can ensure post are suitable for display.
+- I can reset account passwords so that an account can be unlocked if a member forgets their password.
