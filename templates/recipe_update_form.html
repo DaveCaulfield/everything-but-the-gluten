@@ -18,7 +18,8 @@
                             {{ form.field.instructions | safe }}
 
                             <button class="btn btn-secondary mt-3 mb-3" type="submit">Submit</button>
-                            <a class="btn btn-outline-secondary mt-3 mb-3" href="{% url 'my_published_recipes' %}">Cancel</a>
+                            <a class="btn btn-outline-secondary mt-3 mb-3"
+                        href="{% url 'recipe_detail' recipe.slug %}">Cancel</a>
                         </form>
                     </div>
                 </div>
