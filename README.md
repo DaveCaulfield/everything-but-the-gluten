@@ -252,7 +252,7 @@ A subtle footer contains social media icon links in the same color style as the 
 - A message box displays a confirm sign out or cancel sign out button to the user.
 
 
-#Agile Develeopment / User Stories
+# User Stories
 
 As a site visitor 
 - I can view a pagination display of recipes so that I can easily see posted recipes.
@@ -269,10 +269,28 @@ As a site member
 - I can change my password so that I can change my password if needed
 - I can display my published recipes so that I can easily see all recipes I have posted
 - I can write comments on recipes so that I can interact with the community.
-- I can see my Pending recipes so that I can easily track my recipes
-- I can see my Favourite recipes so that I can easily access my favourite recipes
+- I can see my pending recipes so that I can easily track my recipes
+- I can see my favourite recipes so that I can easily access my favourite recipes
 
 
 As a site admin 
 - I can approve submitted recipe posts so that I can ensure post are suitable for display.
 - I can reset account passwords so that an account can be unlocked if a member forgets their password.
+
+
+# Agile Develeopment 
+
+- The Agile methodology was used to manage developmenet of this project by breaking down the requirements and features for the site into user stories. 
+- Acceptance criterias were assingned to each of the user stories 
+- A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
+
+![user-story](README/assets/user-story.png)
+
+- Githubs kanban feature was used for easy tracking of user stories.
+- A template was created for adding the user stories which populated them into the To Do column of the kanban board.
+- User stories were moved into the In Progress column while being worked on.
+- Once all tasks belonging to a user story were completed and the acceptence criteria was met the user story was moved into the Done Column.
+
+![user-story](README/assets/kanban.png)
+
+
