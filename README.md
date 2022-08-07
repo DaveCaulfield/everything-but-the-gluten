@@ -243,6 +243,10 @@ A subtle footer contains social media icon links in the same color style as the 
 - The Sign out page displays when the user selects to sign out from the navigation menu. 
 - A message box displays a confirm sign out or cancel sign out button to the user.
 
+## Future Features
+- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 
 
 ## Design
@@ -262,13 +266,6 @@ A subtle footer contains social media icon links in the same color style as the 
 
 
 - The font colour used is bootstraps secondary grey	#6C757D
-
-
-
-
-
-
-
 
 
 
@@ -292,7 +289,7 @@ A subtle footer contains social media icon links in the same color style as the 
 -  ![Wireframe](README/wireframe/wf-mobile-8.PNG)
 -  ![Wireframe](README/wireframe/wf-mobile-9.PNG)
 
-[Back to top](#wireframes)
+[Back to top](#Everything-but-the-Gluten)
 
 ### Tablet
 
@@ -307,7 +304,7 @@ A subtle footer contains social media icon links in the same color style as the 
 -  ![Wireframe](README/wireframe/wf-tablet-9.PNG)
 -  ![Wireframe](README/wireframe/wf-tablet-10.PNG)
 
-[Back to top](#wireframes)
+[Back to top](#Everything-but-the-Gluten)
 
 ### Desktop
 
@@ -320,20 +317,7 @@ A subtle footer contains social media icon links in the same color style as the 
 -  ![Wireframe](README/wireframe/wf-desktop-7.PNG)
 
 
-[Back to top](#wireframes)
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Back to top](#Everything-but-the-Gluten)
 
 
 
@@ -362,6 +346,8 @@ As a site admin
 - I can approve submitted recipe posts so that I can ensure post are suitable for display.
 - I can reset account passwords so that an account can be unlocked if a member forgets their password.
 
+[Back to top](#Everything-but-the-Gluten)
+
 
 ## Agile Develeopment 
 
@@ -378,4 +364,35 @@ As a site admin
 
 ![user-story](README/assets/kanban.png)
 
+[Back to top](#Everything-but-the-Gluten)
 
+
+
+## Testing
+
+Please see the [testing](testing.md) page for details of Everything but the Gluten testing. 
+
+[Back to top](#Everything-but-the-Gluten)
+
+
+ ## Technologies Used
+
+  - [HTML](https://html.spec.whatwg.org/) was used to structure the website.
+  - [CSS](https://www.w3.org/Style/CSS/Overview.en.html) was used to style the website.
+  - [Javascript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was used to run the game and provide the interactive features.
+  - [Gitpod](https://www.gitpod.io/#get-started) was used to create and edit the website files.
+  - [Github](https://github.com/) was used to host and deploy the website.
+
+[Back to top](#Everything-but-the-Gluten)
+
+
+
+
+ ## Deployment
+ - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+## Credits
+- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
