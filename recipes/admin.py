@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django_summernote.admin import SummernoteModelAdmin, SummernoteInplaceWidget, SummernoteWidget
+from django_summernote.admin import SummernoteModelAdmin, SummernoteWidget
 from .models import Recipe, Comment
 
 
