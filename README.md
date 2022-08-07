@@ -365,7 +365,7 @@ As a site admin
 
 ## Agile Develeopment 
 
-- The Agile methodology was used to manage developmenet of this project by breaking down the requirements and features for the site into user stories. 
+- Agile methodology was used to manage developmenet of this project by breaking down the requirements and features for the site into user stories. 
 - Acceptance criterias were assingned to each of the user stories 
 - A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
 
