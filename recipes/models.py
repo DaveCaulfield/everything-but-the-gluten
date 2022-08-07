@@ -90,4 +90,3 @@ class Comment(models.Model):
     def __str__(self):
         """Magic Method, returns a string description of the object"""
         return f"Comment {self.body} by {self.name}"
-

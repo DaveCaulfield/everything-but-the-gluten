@@ -4,3 +4,20 @@
 
 ## Code Vaildation
 - The code for Everything but the Gluten has been tested using [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [Pep8 online validator](http://pep8online.com/).
+
+### HTML Vaildation
+![html  validation](README/assets/html_validation.png)
+- There were some minor fixes required after html validator testing.
+- All html code writen has passed validation.
+- Pages that contain Summernote render html that does not pass W3C HTML Validator checks.
+
+
+### CSS Vaildation
+![css validation](README/assets/css_validation.png)
+- CSS stylesheet was tested using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and showed no errors.
+
+
+
+### PEP8 Vaildation
+![pep8 validation](README/assets/pep8_validation.png)
+- Python files were tested using [Pep8 online validator](http://pep8online.com/) and showed no errors.

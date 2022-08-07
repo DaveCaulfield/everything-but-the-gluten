@@ -29,4 +29,3 @@ urlpatterns = [
     path('like/<slug:slug>', views.RecipeLike.as_view(),
          name='recipe_like'),
 ]
-

@@ -118,7 +118,7 @@ class RecipeCreateView(
                        generic.CreateView):
     """
     Create a recipe
-    """                  
+    """
     model = Recipe
     form_class = RecipeForm
     template_name = 'recipe_form.html'
@@ -151,7 +151,7 @@ class RecipeUpdateView(
         """
         change the recipe status from published to draft then save.
         allows for admin approval.
-        """ 
+        """
         if self.object.status == 1:
             form.instance.status = 0
         return super().form_valid(form)
@@ -246,7 +246,6 @@ class FavouriteList(generic.ListView):
         return queryset
 
 
-
 def change_password(request):
     """
     Change password form.
@@ -256,7 +255,7 @@ def change_password(request):
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
-            update_session_auth_hash(request, user)  
+            update_session_auth_hash(request, user)
             messages.success(
                              request,
                              'Your password was successfully updated!')
@@ -293,7 +292,7 @@ class AdminRecipeUpdateView(
                             SuccessMessageMixin,
                             generic.UpdateView):
     """
-    Admins recipe update view. allows admin front end approval 
+    Admins recipe update view. allows admin front end approval
     """
     model = Recipe
     form_class = AdminRecipeUpdateForm

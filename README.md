@@ -369,7 +369,7 @@ As a site admin
 - Acceptance criterias were assingned to each of the user stories 
 - A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
 
-![user-story](README/assets/user-story.png)
+![user-story](README/assets/user_story.png)
 
 - Githubs project kanban feature was used for easy tracking of user stories.
 - A template was created for adding the user stories which populated them as issue into the To Do column of the kanban board.
