@@ -13,12 +13,10 @@
     </div>
 
 
-    <!-- <div class="background_img"> -->
-
     <div class="container-fluid ">
         <div class="row">
 
-            <!-- Recipe Entries Column -->
+            <!-- Display Recipes -->
             <div class="col-10 offset-1 mt-3 ">
                 <div class="row">
                     {% for recipe in recipe_list %}
@@ -74,8 +72,9 @@
                 <div class="row">
                     {% endif %}
                     {% endfor %}
-
                 </div>
+
+                <!-- Pagination menu -->
                 <div class="text-center mb-5">
                     {% if is_paginated %}
                     {% if page_obj.has_previous %}

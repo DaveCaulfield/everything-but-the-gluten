@@ -49,15 +49,21 @@ class Recipe(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        """Magic Method, returns a string description of the object"""
+        """
+        Magic Method, returns a string description of the object
+        """
         return self.title
 
     def number_of_likes(self):
-        """Helper method, returns the amount of likes on a recipe"""
+        """
+        Helper method, returns the amount of likes on a recipe
+        """
         return self.likes.count()
 
     def save(self, *args, **kwargs):
-        """ slugify function from learndjango.com"""
+        """
+        slugify function from learndjango.com
+        """
         if not self.slug:
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)

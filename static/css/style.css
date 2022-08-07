@@ -65,7 +65,6 @@ h2 {
 
 .card {
   background-color: #f3f7f8ee;
-  /* width: 18rem; */
 }
 
 .card-img-top {
@@ -139,7 +138,6 @@ h2 {
 .image-container {
   object-fit: cover;
 }
-
 
 .arrow-up {
   font-size: 1.8rem;
