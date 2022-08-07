@@ -23,6 +23,12 @@
 - Python files were tested using [Pep8 online validator](http://pep8online.com/) and showed no errors.
 
 
+## Manual Testing
+![Manual Testing](README/assets/testing_doc1.png)
+![Manual Testing](README/assets/testing_doc2.png)
+![Manual Testing](README/assets/testing_doc3.png)
+
+
 
 
 ## Responsiveness Testing
