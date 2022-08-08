@@ -322,6 +322,8 @@ A subtle footer contains social media icon links in the same color style as the 
 
 
 ## Data Model
+-  A Recipe Model and a Comments Model were created for the database.
+- Django Allauth was used to handle user authentication which uses Django's built-in User Model.
 
 ![data model](README/assets/data_model.png)
 
@@ -383,11 +385,38 @@ Please see the [testing](testing.md) page for details of Everything but the Glut
 
  ## Technologies Used
 
-  - [HTML](https://html.spec.whatwg.org/) was used to structure the website.
-  - [CSS](https://www.w3.org/Style/CSS/Overview.en.html) was used to style the website.
-  - [Javascript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was used to run the game and provide the interactive features.
-  - [Gitpod](https://www.gitpod.io/#get-started) was used to create and edit the website files.
-  - [Github](https://github.com/) was used to host and deploy the website.
+### Languages
+  - python - used to develop the backend of the site.
+  - HTML - used to structure webpage layout of website.
+  - CSS - used to style webpages.
+
+### Frameworks
+ - Django Python Framework - used to create the backend structure for the site.
+ - Bootstrap - used to style the website, add responsiveness and interactivity.
+ - Django-allauth - used for account authentication.
+
+
+### Database
+- PostgreSQL - used as the deployed sites database.
+
+
+### Other Tecnologies
+- Cloudinary - image hosting service to store uploaded static and media files
+- Gitpod - used as the IDE
+- Git used for version control 
+- GitHub - used for hosting the code repository
+- Heroku - used as the cloud based deployment platform
+- Balsamiq - used to create the wireframes
+- Chrome DevTools - used for inspecting and debugging the site
+- Crispy Forms - used to render and style Django Forms
+- Font Awesome - used to source icons
+- Github Projects - used to track user stories progress through the project
+- Summernote - used as an editor within forms.
+- Favicon.io - used for the favicon
+- Adode Color - used for the color theme
+- Google Sheets - for the database model tables and manual testing
+
+
 
 [Back to top](#Everything-but-the-Gluten)
 
@@ -400,5 +429,20 @@ Please see the [testing](testing.md) page for details of Everything but the Glut
 
 
 ## Credits
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Content
+- [BBC Goodfood](https://www.bbcgoodfood.com/) - for the recipes content and images
+- [Pexels](https://www.pexels.com) - for the background images
+- [CoreySchafer](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) - for the Class based vies and pagination YouTube tutorials.
+- [Learn Django](https://learndjango.com/tutorials/django-slug-tutorial) - for the slug tutorial
+- [Bootstrap](https://getbootstrap.com/) - for the custom drop down navigation menu
+- [simpleisbetterthancomplex](https://simpleisbetterthancomplex.com/tips/2016/08/04/django-tip-9-password-change-form.html) - for the change password feature.
+- [djangoproject](https://docs.djangoproject.com/en/4.1/) - for adding messages in class based views
+- [stackoverflow](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown) - for delete message function
+- [stackoverflow](https://stackoverflow.com/questions/17165147/how-can-i-make-a-django-form-field-contain-only-alphanumeric-characters) - for alphanumeric input validation
+
+
+
+## Acknowledgements
+This site was built as my Portfolio 4 Project for the Full Stack Software Developer Diploma at the Code Institute.
+I would like to thank my cohort facilitator Kasia Bogucka, my mentor Precious Leige, the Slack community, Tutor support and Student Care for the help and support provided to me throughout this project.
