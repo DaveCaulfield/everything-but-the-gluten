@@ -35,8 +35,8 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 - Within the users custom drop down menu are links to:
     - Add a Recipe - allows the user to submit a recipe
     - My Published Recipes - displays all recipes the user has submiited and have been approved.
-    - My Favourite Recipes - displays all recipes the user has saved a s a favourite
-    - My Pending Recipes - displays all recipes the user has submitted which are still waiting on approval.
+    - My Favourite Recipes - displays all recipes the user has saved as a favourite.
+    - My Pending Recipes - displays all recipes the user has submitted which are still awaiting admin approval.
     - Change Password - allows the user to change their password.
     - Sign out - allows the user to sign out.
 
@@ -50,10 +50,10 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 - The Admin navbar is displayed when an admin has successfully signed into the site. 
 - A custom drop down menu feature greets the admin displaying their username. 
 - Within the admin custom drop down menu are links to:
-    - Recipes Waiting - displays all recipes awaiting admin approval. 
+    - Recipes Waiting - displays all recipes waiting for admin approval. 
     - Add a Recipe - allows the user to submit a recipe
     - My Published Recipes - displays all recipes the user has submiited and have been approved.
-    - My Favourite Recipes - displays all recipes the user has saved a s a favourite
+    - My Favourite Recipes - displays all recipes the user has saved as a favourite.
     - My Pending Recipes - displays all recipes the user has submitted which are still waiting on approval.
     - Change Password - allows the user to change their password.
     - Sign out - allows the user to sign out.
@@ -121,7 +121,7 @@ A subtle footer contains social media icon links in the same color style as the 
 ![Add Recipe](README/assets/features/recipe-form-2.png) 
 
 - The Add Recipe feature uses a form to allow registered members to submit recipes.
-- A Summernote editor has been add to the ingredients and instructions fields.
+- A Summernote editor has been implemented for the ingredients and instructions fields.
 - An image file can be uploaded with the recipe, if a file is not uploaded by the user then a default placeholder image will be used.
 
 
@@ -139,13 +139,13 @@ A subtle footer contains social media icon links in the same color style as the 
 ![Awaiting approval](README/assets/features/awaiting-message.png) 
 
 - When a recipe has been successfully submitted a success message is displayed indicating that the recipe is now awaiting approval.
-- Recipes are reviewed by administrator to ensure they only contain gluten free ingredients.
+- Recipes are reviewed by an admin before approving to ensure they only contain gluten free ingredients. 
 
 ### Pending Recipes Page
 
 ![pending](README/assets/features/pending.png) 
 
-- My Pending Recipe Page displays the registered members recipes that have been submitted and are awaiting approval.
+- My Pending Recipe Page displays the users recipes that have been submitted and are awaiting approval.
 - After a user has successfully submitted a recipe they are redirected to their Pending Recipes page where they can see a list of any recipes they have submitted that are awaiting approval.
 
 
@@ -153,7 +153,7 @@ A subtle footer contains social media icon links in the same color style as the 
 
 ![pending](README/assets/features/published-recipes.png) 
 
-- My Published Recipe Page displays the registered members recipes that have been approved and are now published on the site.
+- My Published Recipe Page displays the users recipes that have been approved and are now published on the site.
 
 
 ### Favourite Recipes Page
@@ -168,7 +168,7 @@ A subtle footer contains social media icon links in the same color style as the 
 ![recipe details](README/assets/features/recipe-detail-a.png) 
 - The Recipe Details page gives the full details of a recipe.
 - The top of the page dislays the recipe title and author.
-- If the user is the author of the recipe they are given the option of anEdit button anda Delet button. This is only displayed if the user is the author of the recipe.
+- If the user is the author of the recipe they are given the option of an Edit button and a Delete button. This is only displayed if the user is the author of the recipe.
 - The option to Add to Favourites is also displayed allowing the user to save a recipe as a favourite by clicking on the heart outline icon. 
 
 ![recipe details](README/assets/features/saved-to-favourites.png) 
@@ -178,13 +178,13 @@ A subtle footer contains social media icon links in the same color style as the 
 ![recipe details](README/assets/features/recipe-detail-b.png) 
 
 ![recipe details](README/assets/features/recipe-detail-c.png) 
-- The recipe details contain an image, a list of Ingredients and a list of Instruction steps.
+- The recipe details contain an image, a list of Ingredients and a list of Instructional steps.
 
 
 ### comments
 
 ![comments](README/assets/features/comments.png) 
-- The Comments area is at the end of the recipe details page.
+- The Comments area is at the end of the recipe page.
 - The Comments area is only available to registered members.
 - Only members can leave comments on recipes.
 - Members comments are posted without the need for admin approval as it was felt this gives are more engaging experience to the user interacting with the site.
@@ -243,11 +243,12 @@ A subtle footer contains social media icon links in the same color style as the 
 - The Sign out page displays when the user selects to sign out from the navigation menu. 
 - A message box displays a confirm sign out or cancel sign out button to the user.
 
+[Back to top](#Everything-but-the-Gluten)
+
+
 ## Future Features
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
+- A categorisation feature allowing recipes to be filtered by meal type. eg breakfast, lunch, dinner.
+- A search feature allow recipes to be searched by ingredient or by author.
 
 ## Design
 
@@ -266,27 +267,25 @@ A subtle footer contains social media icon links in the same color style as the 
 
 - The font colour used is bootstraps secondary grey	#6C757D
 
+[Back to top](#Everything-but-the-Gluten)
 
 
 ### Wireframes
 
-- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for mobile, tablet and desktop versions of the site. See the screen shots here [Wireframes](wireframe.md)
-
-
-## Wireframes
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for mobile, tablet and desktop versions of the site. 
 
 
 ### Mobile
 
-![Wireframe](README/wireframe/wf-mobile-1.PNG)
-![Wireframe](README/wireframe/wf-mobile-2.PNG)
-![Wireframe](README/wireframe/wf-mobile-3.PNG)
-![Wireframe](README/wireframe/wf-mobile-4.PNG)
-![Wireframe](README/wireframe/wf-mobile-5.PNG)
-![Wireframe](README/wireframe/wf-mobile-6.PNG)
-![Wireframe](README/wireframe/wf-mobile-7.PNG)
-![Wireframe](README/wireframe/wf-mobile-8.PNG)
-![Wireframe](README/wireframe/wf-mobile-9.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-1.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-2.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-3.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-4.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-5.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-6.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-7.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-8.PNG)
+- ![Wireframe](README/wireframe/wf-mobile-9.PNG)
 
 [Back to top](#Everything-but-the-Gluten)
 
@@ -358,7 +357,7 @@ As a site admin
 
 ## Agile Develeopment 
 
-- Agile methodology was used to manage developmenet of this project by breaking down the requirements and features for the site into user stories. 
+- Agile methodology was used to manage the developmenet of this project by breaking down the requirements and features for the site into user stories. 
 - Acceptance criterias were assingned to each of the user stories.
 - A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
 
@@ -377,7 +376,7 @@ As a site admin
 
 ## Testing
 
-Please see the [testing](testing.md) page for details of Everything but the Gluten testing. 
+Please see the [testing](testing.md) page for details of site testing. 
 
 
 
@@ -400,9 +399,8 @@ Please see the [testing](testing.md) page for details of Everything but the Glut
 
 
 ### Other Tecnologies
-- Cloudinary - image hosting service to store uploaded static and media files
-- Gitpod - used as the IDE
-- Git used for version control 
+- Cloudinary - image hosting service
+- Git- used for version control 
 - GitHub - used for hosting the code repository
 - Heroku - used as the cloud based deployment platform
 - Balsamiq - used to create the wireframes
@@ -462,13 +460,13 @@ Please see the [testing](testing.md) page for details of Everything but the Glut
  
   ## Forking
 
-  To fork the project go to the main reposotory page. At the top right of the page, click the Fork icon. A forked copy of the repository will appear in your Repositories page.
+  To fork the project go to the main repository page. At the top right of the page, click the Fork icon. A forked copy of the repository will appear in your Repositories page.
 
 
 ## Credits
 
 ### Content
-- [BBC Goodfood](https://www.bbcgoodfood.com/) - for the recipes content and images
+- [BBC Goodfood](https://www.bbcgoodfood.com/) - for recipe content and images
 - [Pexels](https://www.pexels.com) - for the background images
 - [CoreySchafer](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) - for the Class based vies and pagination YouTube tutorials.
 - [Learn Django](https://learndjango.com/tutorials/django-slug-tutorial) - for the slug tutorial
@@ -483,3 +481,5 @@ Please see the [testing](testing.md) page for details of Everything but the Glut
 ## Acknowledgements
 This site was built as my Portfolio 4 Project for the Full Stack Software Developer Diploma at the Code Institute.
 I would like to thank my cohort facilitator Kasia Bogucka, my mentor Precious Leige, the Slack community, Tutor support and Student Care for the help and support provided to me throughout this project.
+
+[Back to top](#Everything-but-the-Gluten)
