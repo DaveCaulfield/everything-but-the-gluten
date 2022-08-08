@@ -47,8 +47,22 @@ Back to [README.md](README.md)
 
 # Known Bugs
 
-## Resolved
-## Resolved
+## Slugify recipe title
+- There was an issue when submitting recipes that only one recipe could be submitted successfuly.
+- This was due to the recipe title not being translated into the recipe slug field so the the first recipe being submitted had a blank slug field. The second recipe being submitted would fail because it too was being created witha blank slug field.
+- The slug field must be unique.
+- The solution was found on [Learn Django](https://learndjango.com/tutorials/django-slug-tutorial).
+- Once the recipe title was automatically bein translated into a slug then all recipes could be submitted successfully.
+
+
+## Comments not posting
+- There was an issue with somem members comments not posting.
+- This was found to an issue with members that didn't provide an email address when registering an account.
+- the soultion was to make email a requirement on registering an account.
+- [Stackoverflow](https://stackoverflow.com/questions/23956288/django-all-auth-email-required) showed how to implement this in settings.py
+
+
+
 ## Resolved
 
 ## Unresolved

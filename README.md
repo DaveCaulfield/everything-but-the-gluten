@@ -256,14 +256,13 @@ A subtle footer contains social media icon links in the same color style as the 
 
 ### Colour scheme
 
-- Adobe color was used to extract the background colour #E9F0F2 from a background image used in the site.
+- Adobe colour was used to extract the background colour #E9F0F2 from a background image used in the site.
 - #E9F0F2 is also used as the background colour for the navbar and footer giving a an uncluttered and neutral feel to the site.
 
 ![colour](README/assets/color.png)
 
 - The background image is used on the add recipe form page and update recipe form page. 
 - Only the background colour #E9F0F2 is used on the recipe display pages to allow the recipes to stand out to the user.
-
 
 - The font colour used is bootstraps secondary grey	#6C757D
 
@@ -279,42 +278,42 @@ A subtle footer contains social media icon links in the same color style as the 
 
 ### Mobile
 
--  ![Wireframe](README/wireframe/wf-mobile-1.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-2.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-3.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-4.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-5.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-6.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-7.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-8.PNG)
--  ![Wireframe](README/wireframe/wf-mobile-9.PNG)
+![Wireframe](README/wireframe/wf-mobile-1.PNG)
+![Wireframe](README/wireframe/wf-mobile-2.PNG)
+![Wireframe](README/wireframe/wf-mobile-3.PNG)
+![Wireframe](README/wireframe/wf-mobile-4.PNG)
+![Wireframe](README/wireframe/wf-mobile-5.PNG)
+![Wireframe](README/wireframe/wf-mobile-6.PNG)
+![Wireframe](README/wireframe/wf-mobile-7.PNG)
+![Wireframe](README/wireframe/wf-mobile-8.PNG)
+![Wireframe](README/wireframe/wf-mobile-9.PNG)
 
 [Back to top](#Everything-but-the-Gluten)
 
 ### Tablet
 
--  ![Wireframe](README/wireframe/wf-tablet-1.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-2.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-3.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-4.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-5.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-6.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-7.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-8.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-9.PNG)
--  ![Wireframe](README/wireframe/wf-tablet-10.PNG)
+![Wireframe](README/wireframe/wf-tablet-1.PNG)
+![Wireframe](README/wireframe/wf-tablet-2.PNG)
+![Wireframe](README/wireframe/wf-tablet-3.PNG)
+![Wireframe](README/wireframe/wf-tablet-4.PNG)
+![Wireframe](README/wireframe/wf-tablet-5.PNG)
+![Wireframe](README/wireframe/wf-tablet-6.PNG)
+![Wireframe](README/wireframe/wf-tablet-7.PNG)
+![Wireframe](README/wireframe/wf-tablet-8.PNG)
+![Wireframe](README/wireframe/wf-tablet-9.PNG)
+![Wireframe](README/wireframe/wf-tablet-10.PNG)
 
 [Back to top](#Everything-but-the-Gluten)
 
 ### Desktop
 
--  ![Wireframe](README/wireframe/wf-desktop-1.PNG)
--  ![Wireframe](README/wireframe/wf-desktop-2.PNG)
--  ![Wireframe](README/wireframe/wf-desktop-3.PNG)
--  ![Wireframe](README/wireframe/wf-desktop-4.PNG)
--  ![Wireframe](README/wireframe/wf-desktop-5.PNG)
--  ![Wireframe](README/wireframe/wf-desktop-6.PNG)
--  ![Wireframe](README/wireframe/wf-desktop-7.PNG)
+![Wireframe](README/wireframe/wf-desktop-1.PNG)
+![Wireframe](README/wireframe/wf-desktop-2.PNG)
+![Wireframe](README/wireframe/wf-desktop-3.PNG)
+![Wireframe](README/wireframe/wf-desktop-4.PNG)
+![Wireframe](README/wireframe/wf-desktop-5.PNG)
+![Wireframe](README/wireframe/wf-desktop-6.PNG)
+![Wireframe](README/wireframe/wf-desktop-7.PNG)
 
 
 [Back to top](#Everything-but-the-Gluten)
@@ -322,7 +321,7 @@ A subtle footer contains social media icon links in the same color style as the 
 
 
 ## Data Model
--  A Recipe Model and a Comments Model were created for the database.
+- A Recipe Model and a Comments Model were created for the database.
 - Django Allauth was used to handle user authentication which uses Django's built-in User Model.
 
 ![data model](README/assets/data_model.png)
@@ -360,7 +359,7 @@ As a site admin
 ## Agile Develeopment 
 
 - Agile methodology was used to manage developmenet of this project by breaking down the requirements and features for the site into user stories. 
-- Acceptance criterias were assingned to each of the user stories 
+- Acceptance criterias were assingned to each of the user stories.
 - A list of software development tasks required to complete the user story objective and meet the acceptence criteria formed the steps of development to be carried out.
 
 ![user-story](README/assets/user_story.png)
