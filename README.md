@@ -321,6 +321,12 @@ A subtle footer contains social media icon links in the same color style as the 
 
 
 
+## Data Model
+
+![data model](README/assets/data_model.png)
+
+
+
 ## User Stories
 
 As a site visitor 
@@ -372,7 +378,7 @@ As a site admin
 
 Please see the [testing](testing.md) page for details of Everything but the Gluten testing. 
 
-[Back to top](#Everything-but-the-Gluten)
+
 
 
  ## Technologies Used
