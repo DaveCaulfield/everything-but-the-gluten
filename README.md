@@ -423,8 +423,46 @@ Please see the [testing](testing.md) page for details of Everything but the Glut
 
 
  ## Deployment
- - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
- - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ The site was deployed using the Heroku platform.
+
+ The following steps were taken to deploy the site:
+
+ - Log into your Heroku account.
+ - From the home dashboard, click on "New" then "Create new app".
+ - Enter the "App name" and "Choose a region" before clicking on "Create app".
+ - In your apps Resources tab and add a Heroku Postgres database.
+ - Go to "Config Vars" under the "Settings" tab.
+ - Click on "Reveals Config Vars" and enter:
+   - CLOUDINARY_URL = add cloudinary key
+   - DATABASE_URL = add url of heroku postgres database
+   - PORT = 8000
+   - SECRET_KEY = secret key for app
+   - DISABLE_COLLECTSTATIC = 1 for development. Needs to be removed when deploying to production
+ - Go to the Deploy tab and for deployment method selct Github and click on "Connect to GitHub"
+ - Search for the repository name and click connect
+ - Go to the bottom of the deploy page and select preferred deployment type:
+ - Choose "Automatic deploys" or "Manual deploys" to deploy the application
+
+ - In Django setting.py make sure DEBUG is False
+ - create an environment env.py file with database url, cloudinary url and secret key
+
+
+
+ ## Cloning
+ To clone the repository:
+ - Go to the sites main page in Github.
+ - Select the Code drop down button (beside the green gitpod button)
+ - Go to the GitHub CLI tab and click on the copy icon
+ - Open a bash terminal
+ - Change the current working directory to the desired destination location.
+ - Type 'git clone' and paste in the copied URL
+ - Press enter to create the local clone
+ 
+ An environment env.py file must also be created. env.py files are not stored in GitHub so are not included with the cloned files.
+ 
+  ## Forking
+
+  To fork the project go to the main reposotory page. At the top right of the page, click the Fork icon. A forked copy of the repository will appear in your Repositories page.
 
 
 ## Credits

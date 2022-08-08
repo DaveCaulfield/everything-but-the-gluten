@@ -63,13 +63,13 @@ Back to [README.md](README.md)
 
 
 
-## Gitpod Workspace
+## Gitpod Workspace not launching
 - During development there wa an issue with my Gitpod workspace not being able to open.
 - The workspace was stuck with a staus of "allocating resources" when trying to open.
 - This occurred on a saturday evening and was still an issue the following day.
 - A workaround was found on Slack which was to create a new workspace from my github repository and recreate the environment file.
 
-## Mobile drop down nav menu
+## Mobile drop down navigation
 - There was an issue with the drop down navigation menu not working on mobile screens.
 - This was found to be caused by using bootstrap js v4 instead of v5.
 - Once bootstrap js matched bootstrap CSS at version 5 the mobile drop down menu worked ok.
