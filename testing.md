@@ -17,7 +17,6 @@
 - CSS stylesheet was tested using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and showed no errors.
 
 
-
 ### PEP8 Vaildation
 ![pep8 validation](README/assets/pep8_validation.png)
 - Python files were tested using [Pep8 online validator](http://pep8online.com/) and showed no errors.
@@ -27,8 +26,6 @@
 ![Manual Testing](README/assets/testing_doc1.png)
 ![Manual Testing](README/assets/testing_doc2.png)
 ![Manual Testing](README/assets/testing_doc3.png)
-
-
 
 
 ## Responsiveness Testing
@@ -62,7 +59,6 @@ Back to [README.md](README.md)
 - [Stackoverflow](https://stackoverflow.com/questions/23956288/django-all-auth-email-required) showed how to implement this in settings.py
 
 
-
 ## Gitpod Workspace not launching
 - During development there wa an issue with my Gitpod workspace not being able to open.
 - The workspace was stuck with a staus of "allocating resources" when trying to open.
@@ -73,11 +69,6 @@ Back to [README.md](README.md)
 - There was an issue with the drop down navigation menu not working on mobile screens.
 - This was found to be caused by using bootstrap js v4 instead of v5.
 - Once bootstrap js matched bootstrap CSS at version 5 the mobile drop down menu worked ok.
-
-
-
-
-## Unresolved
 
 
 ## Lighthouse

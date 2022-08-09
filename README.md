@@ -4,7 +4,6 @@ Everything but the gluten is a recipe sharing website helping people find and sh
 Users are able to sign up to create their own personal account where they can post recipes, comment on recipes and save their favourite recipes.
 
 
-
 View the live site here [Everything but the Gluten](https://everything-but-the-gluten.herokuapp.com/)
 
 ![landing page](README/assets/responsive.png)
@@ -70,10 +69,7 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 ![Navbar mobile admin](README/assets/features/navbar-mobile.png)
 
 
-
-
 ### The landing page
-
 
 ![landing page1](README/assets/features/landing-page1.png) 
 
@@ -228,7 +224,6 @@ A subtle footer contains social media icon links in the same color style as the 
 - Once approved the recipes will be published on the site for all users to see.
 
 
-
 ### Change Password
 
 ![Change Password](README/assets/features/change-password.png)
@@ -318,13 +313,11 @@ A subtle footer contains social media icon links in the same color style as the 
 [Back to top](#Everything-but-the-Gluten)
 
 
-
 ## Data Model
 - A Recipe Model and a Comments Model were created for the database.
 - Django Allauth was used to handle user authentication which uses Django's built-in User Model.
 
 ![data model](README/assets/data_model.png)
-
 
 
 ## User Stories
@@ -373,12 +366,9 @@ As a site admin
 [Back to top](#Everything-but-the-Gluten)
 
 
-
 ## Testing
 
 Please see the [testing](testing.md) page for details of site testing. 
-
-
 
 
  ## Technologies Used
@@ -413,11 +403,7 @@ Please see the [testing](testing.md) page for details of site testing.
 - Adode Color - used for the color theme
 - Google Sheets - for the database model tables and manual testing
 
-
-
 [Back to top](#Everything-but-the-Gluten)
-
-
 
 
  ## Deployment
@@ -445,7 +431,6 @@ Please see the [testing](testing.md) page for details of site testing.
  - create an environment env.py file with database url, cloudinary url and secret key
 
 
-
  ## Cloning
  To clone the repository:
  - Go to the sites main page in Github.
@@ -468,10 +453,10 @@ Please see the [testing](testing.md) page for details of site testing.
 ### Content
 - [BBC Goodfood](https://www.bbcgoodfood.com/) - for recipe content and images
 - [Pexels](https://www.pexels.com) - for the background images
-- [CoreySchafer](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) - for the Class based vies and pagination YouTube tutorials.
+- [CoreySchafer](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) - for the Class based views and pagination YouTube tutorials
 - [Learn Django](https://learndjango.com/tutorials/django-slug-tutorial) - for the slug tutorial
 - [Bootstrap](https://getbootstrap.com/) - for the custom drop down navigation menu
-- [simpleisbetterthancomplex](https://simpleisbetterthancomplex.com/tips/2016/08/04/django-tip-9-password-change-form.html) - for the change password feature.
+- [simpleisbetterthancomplex](https://simpleisbetterthancomplex.com/tips/2016/08/04/django-tip-9-password-change-form.html) - for the change password feature
 - [djangoproject](https://docs.djangoproject.com/en/4.1/) - for adding messages in class based views
 - [stackoverflow](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown) - for delete message function
 - [stackoverflow](https://stackoverflow.com/questions/17165147/how-can-i-make-a-django-form-field-contain-only-alphanumeric-characters) - for alphanumeric input validation
