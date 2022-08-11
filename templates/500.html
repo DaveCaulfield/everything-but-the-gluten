@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- 500 page-->
+<section id="500 page">
+    <div>
+
+        <div class="row">
+            <div>
+                <div class="col-md-6 mt-5 mb-5 offset-md-3 add_rec text-center shadow p-3 mb-5 rounded">
+                    <h3 class="text-muted mt-3 mb-5 pt-3"> 500</h3>
+                    <p>
+                        Oops! a server error
+                    </p>
+
+                    <p>
+                        Please try again later or follow the links below to our Homepage or Recipes
+                    </p>
+
+                    <div class="d-grid gap-2 col-4 mx-auto mb-3">
+                        <a class="btn btn-secondary" href="{% url 'home' %}">Home</a>
+                    </div>
+
+                    <div class="d-grid gap-2 col-4 mx-auto mb-3">
+                        <a class="btn btn-secondary" href="{% url 'recipe_page_list' %}">Recipes</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock content%}
