@@ -9,6 +9,36 @@ View the live site here [Everything but the Gluten](https://everything-but-the-g
 ![landing page](README/assets/responsive.png)
 
 
+## Design
+
+### User Experience (UX)
+- The user experience (UX) and user interface (UI) was considered from the start of the design process. 
+- The site aims to give the user an enjoyable experience whilst easily and intuitively navigating and interacting with the site on mobile, tablet, laptop or desktop devices.
+
+### Colour scheme
+
+- Adobe colour was used to extract the background colour #E9F0F2 from a background image used in the site.
+- #E9F0F2 is also used as the background colour for the navbar and footer giving a an uncluttered and neutral feel to the site.
+
+![colour](README/assets/color.png)
+
+- The background image is used on the add recipe form page and update recipe form page. 
+- Only the background colour #E9F0F2 is used on the recipe display pages to allow the recipes to stand out to the user.
+
+- The font colour used is bootstraps secondary grey	#6C757D
+
+[Back to top](#Everything-but-the-Gluten)
+
+
+### Wireframes
+
+- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for [mobile](wireframe_mobile.md), [tablet](wireframe_tablet.md) and [desktop](wireframe_desktop.md).
+
+
+
+
+
+
 ## Features
 
 ### The Nav Bar
@@ -244,73 +274,6 @@ A subtle footer contains social media icon links in the same color style as the 
 ## Future Features
 - A categorisation feature allowing recipes to be filtered by meal type. eg breakfast, lunch, dinner.
 - A search feature allow recipes to be searched by ingredient or by author.
-
-## Design
-
-### User Experience (UX)
-- The user experience (UX) and user interface (UI) was considered from the start of the design process. The site aims to give the user an enjoyable experience whilst easily and intuitively navigating and interacting with the site on mobile, tablet, laptop or desktop devices.
-
-### Colour scheme
-
-- Adobe colour was used to extract the background colour #E9F0F2 from a background image used in the site.
-- #E9F0F2 is also used as the background colour for the navbar and footer giving a an uncluttered and neutral feel to the site.
-
-![colour](README/assets/color.png)
-
-- The background image is used on the add recipe form page and update recipe form page. 
-- Only the background colour #E9F0F2 is used on the recipe display pages to allow the recipes to stand out to the user.
-
-- The font colour used is bootstraps secondary grey	#6C757D
-
-[Back to top](#Everything-but-the-Gluten)
-
-
-### Wireframes
-
-- [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes for mobile, tablet and desktop versions of the site. 
-
-
-### Mobile
-
-- ![Wireframe](README/wireframe/wf-mobile-1.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-2.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-3.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-4.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-5.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-6.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-7.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-8.PNG)
-- ![Wireframe](README/wireframe/wf-mobile-9.PNG)
-
-[Back to top](#Everything-but-the-Gluten)
-
-### Tablet
-
-![Wireframe](README/wireframe/wf-tablet-1.PNG)
-![Wireframe](README/wireframe/wf-tablet-2.PNG)
-![Wireframe](README/wireframe/wf-tablet-3.PNG)
-![Wireframe](README/wireframe/wf-tablet-4.PNG)
-![Wireframe](README/wireframe/wf-tablet-5.PNG)
-![Wireframe](README/wireframe/wf-tablet-6.PNG)
-![Wireframe](README/wireframe/wf-tablet-7.PNG)
-![Wireframe](README/wireframe/wf-tablet-8.PNG)
-![Wireframe](README/wireframe/wf-tablet-9.PNG)
-![Wireframe](README/wireframe/wf-tablet-10.PNG)
-
-[Back to top](#Everything-but-the-Gluten)
-
-### Desktop
-
-![Wireframe](README/wireframe/wf-desktop-1.PNG)
-![Wireframe](README/wireframe/wf-desktop-2.PNG)
-![Wireframe](README/wireframe/wf-desktop-3.PNG)
-![Wireframe](README/wireframe/wf-desktop-4.PNG)
-![Wireframe](README/wireframe/wf-desktop-5.PNG)
-![Wireframe](README/wireframe/wf-desktop-6.PNG)
-![Wireframe](README/wireframe/wf-desktop-7.PNG)
-
-
-[Back to top](#Everything-but-the-Gluten)
 
 
 ## Data Model
