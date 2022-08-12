@@ -18,6 +18,7 @@ urlpatterns = [
     path('my_favourite_recipes/', views.FavouriteList.as_view(),
          name='my_favourite_recipes'),
     path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
     path('recipe_page_list/', views.RecipeList.as_view(),
          name='recipe_page_list'),
     path('add/', views.RecipeCreateView.as_view(),
@@ -28,4 +29,5 @@ urlpatterns = [
          name='recipe_delete'),
     path('like/<slug:slug>', views.RecipeLike.as_view(),
          name='recipe_like'),
+    
 ]
